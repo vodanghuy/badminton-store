@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Sản Phẩm</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Header và Navbar */
+        header {
+            background-color: #333;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav ul li a:hover {
+            color: #ddd;
+        }
+
+        /* Body */
+        .container {
+            display: flex;
+            min-height: calc(100vh - 60px); /* Trừ chiều cao header */
+        }
+
+        /* Danh mục bên trái */
+        .sidebar {
+            width: 25%;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .sidebar h3 {
+            margin-bottom: 10px;
+        }
+        .sidebar ul {
+            list-style: none;
+        }
+        .sidebar ul li {
+            padding: 10px;
+            cursor: pointer;
+        }
+        .sidebar ul li:hover,
+        .sidebar ul li.active {
+            background-color: #ddd;
+            font-weight: bold;
+        }
+
+        /* Danh sách sản phẩm bên phải */
+        .product-list {
+            width: 75%;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .product {
+            width: calc(33.33% - 20px);
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar, .product-list {
+                width: 100%;
+            }
+            .product {
+                width: calc(50% - 20px);
+            }
+        }
+        @media (max-width: 480px) {
+            .product {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header với Navbar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Sản phẩm</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Body -->
+    <div class="container">
+        <!-- Danh mục bên trái -->
+        <div class="sidebar">
+            <h3>Danh mục sản phẩm</h3>
+            <ul id="category-list">
+                <li data-category="electronics" class="active">Đồ điện tử</li>
+                <li data-category="clothing">Quần áo</li>
+                <li data-category="books">Sách</li>
+            </ul>
+        </div>
+
+        <!-- Danh sách sản phẩm bên phải -->
+        <div class="product-list" id="product-list">
+            <!-- Sản phẩm sẽ được load bằng JavaScript -->
+        </div>
+    </div>
+
+    <!-- JavaScript để load sản phẩm -->
+    <script>
+        // Dữ liệu giả lập sản phẩm
+        const products = {
+            electronics: [
+                { name: "Điện thoại", price: "5,000,000 VNĐ", img: "https://via.placeholder.com/150" },
+                { name: "Máy tính", price: "15,000,000 VNĐ", img: "https://via.placeholder.com/150" }
+            ],
+            clothing: [
+                { name: "Áo thun", price: "200,000 VNĐ", img: "https://via.placeholder.com/150" },
+                { name: "Quần jeans", price: "500,000 VNĐ", img: "https://via.placeholder.com/150" }
+            ],
+            books: [
+                { name: "Sách lập trình", price: "150,000 VNĐ", img: "https://via.placeholder.com/150" },
+                { name: "Tiểu thuyết", price: "100,000 VNĐ", img: "https://via.placeholder.com/150" }
+            ]
+        };
+
+        // Hàm hiển thị sản phẩm
+        function displayProducts(category) {
+            const productList = document.getElementById('product-list');
+            productList.innerHTML = ''; // Xóa danh sách cũ
+
+            products[category].forEach(product => {
+                const productDiv = document.createElement('div');
+                productDiv.classList.add('product');
+                productDiv.innerHTML = `
+                    <img src="${product.img}" alt="${product.name}">
+                    <h4>${product.name}</h4>
+                    <p>${product.price}</p>
+                `;
+                productList.appendChild(productDiv);
+            });
+        }
+
+        // Xử lý sự kiện khi chọn danh mục
+        const categories = document.querySelectorAll('#category-list li');
+        categories.forEach(category => {
+            category.addEventListener('click', function() {
+                // Xóa class active khỏi tất cả
+                categories.forEach(cat => cat.classList.remove('active'));
+                // Thêm class active cho danh mục được chọn
+                this.classList.add('active');
+                // Load sản phẩm theo danh mục
+                const selectedCategory = this.getAttribute('data-category');
+                displayProducts(selectedCategory);
+            });
+        });
+
+        // Load danh mục mặc định khi trang mở
+        displayProducts('electronics');
+    </script>
+</body>
+</html>

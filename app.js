@@ -7,6 +7,9 @@ var mongoose = require('mongoose')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var productsRouter = require('./routes/products');
+var categoriesRouter = require('./routes/categories');
+var brandsRouter = require('./routes/brands');
 
 var app = express();
 mongoose.connect("mongodb://localhost:27017/badminton-store")
@@ -26,6 +29,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/products', productsRouter);
+app.use('/categories', categoriesRouter);
+app.use('/brands', brandsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
