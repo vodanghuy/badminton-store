@@ -46,6 +46,6 @@ let userSchema = mongoose.Schema({
     }
 },
 {
-    timestamp: true
+    timestamps: true
 })
 module.exports = mongoose.model('user', userSchema)
