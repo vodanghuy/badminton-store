@@ -26,5 +26,43 @@ router.post('/login', async function(req, res, next) {
         next(error)
     }
 })
-
+// Sign up
+router.post('/signup', async function(req, res, next) {
+  try {
+    let user = await userController.createUser(req.body)
+    res.status(201).json({
+      success: true,
+      data: user
+    })
+  } catch (error) {
+    next(error)
+  }
+})
+// Get me
+router.get('/me', async function(req,res,next){
+    try {
+        if(!req.headers || !req.headers.authorization){
+            throw new Error("Bạn chưa đăng nhập")
+        }
+        if(!req.headers.authorization.startsWith("Bearer")){
+            throw new Error("Bạn chưa đăng nhập")
+        }
+        let token = req.headers.authorization.split(" ")[1];
+        let result = jwt.verify(token, constants.SECRET_KEY)
+        let user_id = result.id
+        if(result.expireIn > Date.now()){
+            let user = await userController.getUserById(user_id);
+            res.send({
+                success: true,
+                data: user
+            })
+        }
+        else
+        {
+            throw new Error ("Token hết hạn")
+        }
+    } catch (error) {
+        next(error)
+    }
+})
 module.exports = router
