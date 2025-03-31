@@ -11,7 +11,7 @@ var rolesRouter = require('./routes/roles');
 var productsRouter = require('./routes/products');
 var categoriesRouter = require('./routes/categories');
 var brandsRouter = require('./routes/brands');
-const categories = require('./controllers/categories');
+var authRouter = require('./routes/auth');
 
 var app = express();
 mongoose.connect("mongodb://localhost:27017/badminton-store")
@@ -37,6 +37,7 @@ app.use('/roles', rolesRouter);
 app.use('/products', productsRouter);
 app.use('/categories', categoriesRouter);
 app.use('/brands', brandsRouter);
+app.use('/auth', authRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

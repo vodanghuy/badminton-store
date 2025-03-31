@@ -1,5 +1,6 @@
 let userSchema = require('../schemas/user')
 let roleSchema = require('../schemas/role')
+let bcrypt = require('bcrypt')
 
 module.exports = {
     // Create user
@@ -94,5 +95,23 @@ module.exports = {
         user.isDeleted = true
         await user.save()
         return user
+    },
+    // Check login
+    checkLogin: async function(username, password)
+    {
+        let user = await userSchema.findOne({ username: username })
+        if(!user) {
+            throw new Error("Tên tài khoản hoặc mật khẩu không hợp lệ")
+        }
+        else
+        {
+            if(bcrypt.compareSync(password, user.password)){
+                return user._id
+            }
+            else
+            {
+                throw new Error("Tên tài khoản hoặc mật khẩu không hợp lệ")
+            }
+        }
     }
 }
