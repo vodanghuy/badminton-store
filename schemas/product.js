@@ -15,10 +15,11 @@ let productSchema = mongoose.Schema({
     },
     quantity:{
         type:Number,
-        required: true
+        default: 0
     },
     imageURL:{
         type:String,
+        default: ""
     },
     category:{
         type:mongoose.Types.ObjectId,

@@ -7,9 +7,11 @@ var mongoose = require('mongoose')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var rolesRouter = require('./routes/roles');
 var productsRouter = require('./routes/products');
 var categoriesRouter = require('./routes/categories');
 var brandsRouter = require('./routes/brands');
+const categories = require('./controllers/categories');
 
 var app = express();
 mongoose.connect("mongodb://localhost:27017/badminton-store")
@@ -26,9 +28,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/admins', express.static(path.join(__dirname, 'views', 'admins')));
+app.use('/', express.static(path.join(__dirname, 'views', 'users')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/roles', rolesRouter);
 app.use('/products', productsRouter);
 app.use('/categories', categoriesRouter);
 app.use('/brands', brandsRouter);
@@ -47,6 +52,7 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
+  res.send(err.message);
 });
 
 module.exports = app;

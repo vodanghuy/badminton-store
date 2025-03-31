@@ -1,0 +1,11 @@
+CREATE USER
+{
+   "username": "vodanghuy",
+   "password": "123",
+   "email": "iamdaghuy@gmail.com",
+   "fullName": "iamdaghuy",
+   "phoneNumber": "0866733574",
+   "dateOfBirth": "03/12/2003",
+   "gender": "Nam",
+   "role": "User"
+}

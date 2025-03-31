@@ -5,6 +5,10 @@ let brandSchema = mongoose.Schema({
         unique: true,
         required: true
     },
+    description:{
+        type:String,
+        default:""
+    },
     isDeleted:{
         type: Boolean,
         default: "false"

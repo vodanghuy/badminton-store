@@ -5,8 +5,13 @@ const category = require("../schemas/category");
 
 /* Get all categories. */
 router.get('/', async function (req, res, next) {
-  let categories = await categoryController.getAllCategories();
-  res.send(categories);
+    try {
+        let categories = await categoryController.getAllCategories();
+        res.send(categories);
+    } catch (error) {
+        next(error);
+    }
+  
 });
 
 /* Get category by id. */

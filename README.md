@@ -1,7 +1,5 @@
 ***
-{
-    "fullName" : "Võ Đăng Huy",
-    "studentId": "2180608852",
-    "class": "21DTHD5"  
-}
+Họ và tên: Võ Đăng Huy\
+MSSV: 2180608852\
+Lớp: 21DTHD5
 ***

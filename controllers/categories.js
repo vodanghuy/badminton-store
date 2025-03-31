@@ -4,7 +4,7 @@ let categorySchema = require('../schemas/category');
 module.exports = {
     // Get all categories
     getAllCategories: async function(){
-        return await categorySchema.find({});
+        return await categorySchema.find();
     },
     // Get category by id
     getById: async function(id){

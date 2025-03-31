@@ -13,6 +13,7 @@ let userSchema = mongoose.Schema({
     email:{
         type: String,
         unique: true,
+        required: true,
     },
     fullName:{
         type: String,
@@ -38,7 +39,7 @@ let userSchema = mongoose.Schema({
     role:{
         type: mongoose.Types.ObjectId,
         ref: 'role',
-        default: 1
+        required: true
     },
     isDeleted:{
         type: Boolean,
