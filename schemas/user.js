@@ -1,4 +1,5 @@
-let mongoose = require('mongoose')
+let mongoose = require('mongoose');
+let bcrypt = require('bcrypt');
 let userSchema = mongoose.Schema({
     username:{
         type: String,
@@ -22,7 +23,7 @@ let userSchema = mongoose.Schema({
     phoneNumber:{
         type: String,
         required: true,
-        unique: true
+        unique: [true, 'Số điện thoại đã tồn tại']
     },
     dateOfBirth:{
         type: Date,
@@ -48,5 +49,15 @@ let userSchema = mongoose.Schema({
 },
 {
     timestamps: true
+})
+
+// Mã hóa mật khẩu
+userSchema.pre('save', function(next) {
+    if(this.isModified('password')){
+        let salt = bcrypt.genSaltSync(10);
+        let hash = bcrypt.hashSync(this.password, salt);
+        this.password = hash;
+    }
+    next();
 })
 module.exports = mongoose.model('user', userSchema)
