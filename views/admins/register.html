@@ -35,17 +35,30 @@
 	  	<div class="container">
 	  	
 		      <form class="form-login" action="index.html">
-		        <h2 class="form-login-heading">Đăng nhập</h2>
+		        <h2 class="form-login-heading">Đăng KÝ</h2>
 		        <div class="login-wrap">
-		            <input type="text" class="form-control" placeholder="Tên đăng nhập" autofocus>
+		            <input name="username" type="text" class="form-control" placeholder="Tên đăng nhập" autofocus required>
 		            <br>
-		            <input type="password" class="form-control" placeholder="Mật khẩu">
-		            <label class="checkbox">
-		                <span class="pull-right">
-		                    <a data-toggle="modal" href="login.html#myModal"> Quên mật khẩu?</a>
-		                </span>
-		            </label>
-		            <button class="btn btn-theme btn-block" href="index.html" type="submit"><i class="fa fa-lock"></i> Đăng nhập</button>
+					<input name="fullName" type="text" class="form-control" placeholder="Họ và tên" autofocus required>
+					<br>
+					<input name="email" type="text" class="form-control" placeholder="Email" autofocus required>
+					<br>
+					<input name="phoneNumber" type="text" class="form-control" placeholder="Số điện thoại" autofocus required>
+					<br>
+					<input name="dateOfBirth" type="date" class="form-control" placeholder="Ngày sinh" autofocus required>
+					<br>
+					<input name="address" type="text" class="form-control" placeholder="Địa chỉ giao hàng" autofocus required>
+					<br>
+					<select class="form-control" name="gender" id="gender">
+						<option value="male">Nam</option>
+						<option value="female">Nữ</option>
+					</select>
+					<br>
+		            <input name="password" type="password" class="form-control" placeholder="Mật khẩu" required>
+					<br>
+					<input name="confirmPassword" type="password" class="form-control" placeholder="Xác nhận mật khẩu" required>
+		            <br>
+		            <button class="btn btn-theme btn-block" href="index.html" type="submit"><i class="fa fa-lock"></i> Đăng ký</button>
 		            <hr>
 		            
 		            <!-- <div class="login-social-link centered">
@@ -54,9 +67,9 @@
 		                <button class="btn btn-twitter" type="submit"><i class="fa fa-twitter"></i> Twitter</button>
 		            </div> -->
 		            <div class="registration">
-		                Chưa có tài khoản?<br/>
-		                <a class="" href="register.html">
-		                    Đăng ký
+		                Đã có tài khoản?<br/>
+		                <a class="" href="login.html">
+		                    Đăng nhập
 		                </a>
 		            </div>
 		
