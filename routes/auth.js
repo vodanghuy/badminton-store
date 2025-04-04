@@ -51,4 +51,19 @@ router.get('/me', check_authentication, async function(req,res,next){
         next(error)
     }
 })
+
+// Change password
+router.post('/changePassword', check_authentication, async function(req,res,next){
+    try {
+        let oldPassword = req.body.oldPassword
+        let newPassword = req.body.newPassword
+        let user = await userController.changePassword(req.user._id, oldPassword, newPassword)
+        res.status(200).send({
+            message: "Đổi mật khẩu thành công",
+            data: user
+        })
+    } catch (error) {
+        next(error)
+    }
+})
 module.exports = router

@@ -110,5 +110,18 @@ module.exports = {
                 throw new Error("Tên tài khoản hoặc mật khẩu không hợp lệ")
             }
         }
+    },
+
+    // Change password
+    changePassword: async function(id, oldPassword, newPassword) {
+        let user = await userSchema.findById(id)
+        if(bcrypt.compareSync(oldPassword, user.password)){
+            throw new Error("Mật khẩu cũ không đúng")
+        }
+        else
+        {
+            user.password = newPassword;
+            await user.save()
+        }
     }
 }
