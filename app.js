@@ -26,7 +26,7 @@ app.set('view engine', 'pug');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
+app.use(cookieParser('dahnguy'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/admins', express.static(path.join(__dirname, 'views', 'admins')));
 app.use('/', express.static(path.join(__dirname, 'views', 'users')));
@@ -51,7 +51,7 @@ app.use(function(err, req, res, next) {
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
   // render the error page
-  res.status(err.status || 500);
+ res.status(err.status || 500);
   res.status(err.status || 500).send({
     success:false,
     message: err.message

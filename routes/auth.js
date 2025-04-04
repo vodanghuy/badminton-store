@@ -11,13 +11,24 @@ router.post('/login', async function(req, res, next) {
         let username = req.body.username
         let password = req.body.password
         let result = await userController.checkLogin(username, password)
+        let exp = new Date(Date.now() + 3600 * 1000)
         if(result) {
+        // Create token
+        let token = jwt.sign({
+            id: result,
+            expireIn: exp.getTime()
+        }, constants.SECRET_KEY)
+        // Set cookie
+        res.cookie(
+            'token', token,{ // '[cookie_name]', '[cookie_value]'
+                httpOnly: true, // Cookie chỉ có thể được truy cập bởi server, không qua JavaScript ở client
+                expires: exp, //Thời gian hết hạn của cookie
+                signed: true //Cookie được ký bằng chuỗi bí mật (đã thiết lập trong cookieParser(''))
+            }
+        )
             res.status(200).send({
                 message: "Đăng nhập thành công",
-                data: jwt.sign({
-                    id: result,
-                    expireIn: (new Date(Date.now() + 3600 * 1000)).getTime()
-                },constants.SECRET_KEY)
+                data: token
             })
         } else {
             res.status(401).send({

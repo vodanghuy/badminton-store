@@ -3,31 +3,33 @@ let constants = require("../utils/constants"); // Get secret key
 var userController = require("../controllers/users"); // Get user controller
 module.exports = {
   check_authentication: async function (req, res, next) {
+    let token;
     // Check if user is logged in
     if (
       !req.headers ||
       !req.headers.authorization ||
       !req.headers.authorization.startsWith("Bearer")
     ) {
-      next(new Error("Bạn chưa đăng nhập"));
+        if(req.signedCookies.token) {
+            token = req.signedCookies.token;
+        }
     }
-    // // Check if token is valid
-    // if(req.headers.authorization && !req.headers.authorization.startsWith("Bearer")){
-    //     next(new Error("Bạn chưa đăng nhập"))
-    // }
     else {
       // Get token from header
       let token = req.headers.authorization.split(" ")[1];
-      // Get user id from token
-      let result = jwt.verify(token, constants.SECRET_KEY);
-      let user = await userController.getUserById(result.id);
-      // Check if token is expired
-      if (result.expireIn > Date.now()) {
-        req.user = user;
-        next();
-      } else {
-        next(new Error("Token đã hết hạn"));
-      }
+    }
+    if(!token){
+        return next(new Error("Bạn chưa đăng nhập"));
+    }
+    // Get user id from token
+    let result = jwt.verify(token, constants.SECRET_KEY);
+    let user = await userController.getUserById(result.id);
+    // Check if token is expired
+    if (result.expireIn > Date.now()) {
+      req.user = user;
+      next();
+    } else {
+      next(new Error("Token đã hết hạn"));
     }
   },
   // Check if user has permission to access resource
