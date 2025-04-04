@@ -41,10 +41,7 @@ module.exports = {
     },
     // Get user by ID
     getUserById: async function(id) {
-        let user = await userSchema.findById(id).populate({
-            path: 'role',
-            select: 'name'
-        })
+        let user = await userSchema.findById(id).populate('role')
         if(!user) {
             throw new Error("Không tìm thấy người dùng")
         }

@@ -3,6 +3,8 @@ let router = express.Router()
 let userController = require("../controllers/users")
 let jwt = require("jsonwebtoken")
 let constants = require("../utils/constants")
+// Get check_authentication and check_authorization functions
+let {check_authentication, check_authorization} = require("../utils/check_auth")
 
 router.post('/login', async function(req, res, next) {
     try {
@@ -39,28 +41,12 @@ router.post('/signup', async function(req, res, next) {
   }
 })
 // Get me
-router.get('/me', async function(req,res,next){
+router.get('/me', check_authentication, async function(req,res,next){
     try {
-        if(!req.headers || !req.headers.authorization){
-            throw new Error("Bạn chưa đăng nhập")
-        }
-        if(!req.headers.authorization.startsWith("Bearer")){
-            throw new Error("Bạn chưa đăng nhập")
-        }
-        let token = req.headers.authorization.split(" ")[1];
-        let result = jwt.verify(token, constants.SECRET_KEY)
-        let user_id = result.id
-        if(result.expireIn > Date.now()){
-            let user = await userController.getUserById(user_id);
             res.send({
                 success: true,
-                data: user
+                data: req.user
             })
-        }
-        else
-        {
-            throw new Error ("Token hết hạn")
-        }
     } catch (error) {
         next(error)
     }
