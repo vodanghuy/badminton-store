@@ -13,6 +13,7 @@ var categoriesRouter = require('./routes/categories');
 var brandsRouter = require('./routes/brands');
 var authRouter = require('./routes/auth');
 var cartRouter = require('./routes/cart');
+var menuRouter = require('./routes/menu');
 
 var app = express();
 mongoose.connect("mongodb://localhost:27017/badminton-store")
@@ -40,6 +41,7 @@ app.use('/categories', categoriesRouter);
 app.use('/brands', brandsRouter);
 app.use('/auth', authRouter);
 app.use('/cart', cartRouter);
+app.use('/menu', menuRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
