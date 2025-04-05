@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose')
+var cors = require('cors')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -25,13 +26,15 @@ mongoose.connection.on('connected', ()=>{
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
+// Cho phép truy cập api từ các nguồn khác nhau
+app.use(cors({
+  origin: '*'
+}));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser('dahnguy'));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use('/admins', express.static(path.join(__dirname, 'views', 'admins')));
-app.use('/', express.static(path.join(__dirname, 'views', 'users')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

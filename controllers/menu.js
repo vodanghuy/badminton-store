@@ -3,7 +3,18 @@ let menuSchema = require('../schemas/menu')
 module.exports = {
     // Get all menu items
     getAllMenu: async function () {
-        return await menuSchema.find().populate({ path: 'parent', select: 'text' }).sort({ order: 1 });
+        let menus = await menuSchema.find();
+        let parents = menus.filter(menu => menu.parent === null);
+        let result = [];
+        for (const parent of parents) {
+            let children = await menuSchema.find({ parent: parent._id }).select('text url')
+            result.push({
+                text: parent.text,
+                url: parent.url,
+                children: children
+            })
+        }
+        return result;
     },
     // Get menu item by id
     getById: async function (id) {
@@ -19,9 +30,13 @@ module.exports = {
         let newMenu = new menuSchema({
             text: body.text,
             url: body.url,
-            parent: body.parent,
-            order: body.order
         });
+        if(body.parent) {
+            let parent = await menuSchema.findOne({
+                text: body.parent
+            })
+            newMenu.parent = parent._id
+        }
         return await newMenu.save();
     },
     // Update menu item

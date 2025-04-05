@@ -13,3 +13,11 @@ CREATE USER
 * npm i slugify
 
 * dynamic menu
+
+** CSRF (Cross Site Request Forgery)
+npm i cors -> app.js [
+   let cors = require('cors') 
+   app.use(cors({
+      origin:'*'
+   }))
+   ]
