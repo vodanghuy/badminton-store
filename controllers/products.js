@@ -165,5 +165,10 @@ module.exports = {
         return await productsSchema.find({
             category: category.name
         })
+    },
+    updateQuantity: async function(id, quantity){
+        let product = await productSchema.findById(id)
+        product.quantity -= quantity
+        return await product.save()
     }
 }

@@ -1,6 +1,7 @@
 let userSchema = require('../schemas/user')
 let roleSchema = require('../schemas/role')
 let bcrypt = require('bcrypt')
+let cartController = require('../controllers/cart')
 
 module.exports = {
     // Create user
@@ -13,6 +14,10 @@ module.exports = {
         let existingEmail = await userSchema.findOne({ email: body.email })
         if(existingEmail) {
             throw new Error("Email đã tồn tại")
+        }
+        let existingPhoneNumber = await userSchema.findOne({ email: body.phoneNumber })
+        if(existingEmail) {
+            throw new Error("Số điện thoại đã tồn tại")
         }
         let role = await roleSchema.findOne({
             name: body.role
@@ -29,6 +34,7 @@ module.exports = {
             role: role._id
         })
         user = await user.save()
+        let cart = await cartController.createCart(user._id)
         return user
     },
     // Get all users
