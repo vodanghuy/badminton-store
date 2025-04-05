@@ -21,3 +21,11 @@ npm i cors -> app.js [
       origin:'*'
    }))
    ]
+
+* npm i express-validator
+- validate
+- validation result
+
+* node mailer
+
+*mail trap

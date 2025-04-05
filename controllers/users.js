@@ -132,5 +132,24 @@ module.exports = {
             user.password = newPassword;
             await user.save()
         }
+    },
+
+    // Get user by email
+    getUserByEmail: async function(email) {
+        let user = await userSchema.findOne({ email: email })
+        if(!user) {
+            throw new Error("Không tìm thấy người dùng")
+        }
+        return user
+    },
+    // Get user by token
+    getUserByToken: async function(token){
+        let user = await userSchema.findOne({
+            ResetPasswordToken: token,
+        })
+        if(!user) {
+            throw new Error("Không tìm thấy người dùng")
+        }
+        return user
     }
 }

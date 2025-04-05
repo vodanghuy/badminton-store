@@ -45,10 +45,12 @@ let userSchema = mongoose.Schema({
     isDeleted:{
         type: Boolean,
         default: "false"
-    }
+    },
+    ResetPasswordToken: String,
+    ResetPasswordExpire: Date,
 },
 {
-    timestamps: true
+    timestamps: true,
 })
 
 // Mã hóa mật khẩu
