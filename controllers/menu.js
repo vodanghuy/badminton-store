@@ -7,12 +7,19 @@ module.exports = {
         let parents = menus.filter(menu => menu.parent === null);
         let result = [];
         for (const parent of parents) {
-            let children = await menuSchema.find({ parent: parent._id }).select('text url')
-            result.push({
-                text: parent.text,
-                url: parent.url,
-                children: children
-            })
+            let objectParent = {};
+            objectParent.text = parent.text;
+            objectParent.url = parent.url;
+            let childrenRes = await menuSchema.find({ parent: parent._id }).select('text url')
+            let children = []
+            for (const child of childrenRes) {
+               children.push({
+                    text: child.text,
+                    url: child.url
+                })
+            }
+            objectParent.children = children;
+            result.push(objectParent)
         }
         return result;
     },

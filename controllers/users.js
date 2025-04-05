@@ -86,7 +86,10 @@ module.exports = {
             })
             user.role = role._id
         }
-        user = await userSchema.findByIdAndUpdate(id, body, { new: true })
+        if(body.password){
+            user.password = body.password
+        }
+        await user.save()
         return user
     },
     // Delete user

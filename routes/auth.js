@@ -5,8 +5,8 @@ let jwt = require("jsonwebtoken")
 let constants = require("../utils/constants")
 // Get check_authentication and check_authorization functions
 let {check_authentication, check_authorization} = require("../utils/check_auth")
-
-router.post('/login', async function(req, res, next) {
+let {validate, UserValidation} = require("../utils/validator")
+router.post('/login', UserValidation, validate, async function(req, res, next) {
     try {
         let username = req.body.username
         let password = req.body.password
@@ -40,7 +40,7 @@ router.post('/login', async function(req, res, next) {
     }
 })
 // Sign up
-router.post('/signup', async function(req, res, next) {
+router.post('/signup',UserValidation, validate, async function(req, res, next) {
   try {
     let user = await userController.createUser(req.body)
     res.status(201).json({

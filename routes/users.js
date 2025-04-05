@@ -7,6 +7,8 @@ var userController = require('../controllers/users')
 let {check_authentication, check_authorization} = require('../utils/check_auth')
 // Get constants
 let constants = require('../utils/constants')
+// Get validator
+let {validate, UserValidation} = require('../utils/validator')
 
 // Get all users
 router.get('/',check_authentication, check_authorization(constants.ADMIN_PERMISSION), async function(req, res, next) {
@@ -33,7 +35,7 @@ router.get('/:id',check_authentication, check_authorization(constants.ADMIN_PERM
   }
 })
 // Create user
-router.post('/',check_authentication, check_authorization(constants.ADMIN_PERMISSION), async function(req, res, next) {
+router.post('/',check_authentication, check_authorization(constants.ADMIN_PERMISSION), UserValidation, validate, async function(req, res, next) {
   try {
     let user = await userController.createUser(req.body)
     res.status(201).json({
@@ -45,7 +47,7 @@ router.post('/',check_authentication, check_authorization(constants.ADMIN_PERMIS
   }
 })
 // Update user
-router.put('/:id',check_authentication, check_authorization(constants.USER_PERMISSION), async function(req, res, next) {
+router.put('/:id',check_authentication, check_authorization(constants.USER_PERMISSION), UserValidation, validate, async function(req, res, next) {
   try {
     let user = await userController.updateUser(req.params.id, req.body)
     res.status(200).json({
