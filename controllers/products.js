@@ -1,6 +1,8 @@
 let productsSchema = require('../schemas/product');
 let brandSchema = require('../schemas/brand');
 let categorySchema = require('../schemas/category');
+//npm i slugify
+var slugify = require('slugify');
 
 module.exports = {
     buildQuery: function (query) {
@@ -86,7 +88,11 @@ module.exports = {
             quantity: quantity ? quantity : 0,
             category: category._id,
             brand: brand._id,
-            imageURL: imageURL ? imageURL : ""
+            imageURL: imageURL ? imageURL : "",
+            // Tạo đường dẫn slug từ tên sản phẩm
+            slug: slugify(name, {
+                lower: true
+            })
         });
         return await newProduct.save();
     },

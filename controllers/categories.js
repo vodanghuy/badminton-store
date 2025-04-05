@@ -1,6 +1,6 @@
 const category = require('../schemas/category');
 let categorySchema = require('../schemas/category');
-
+let slugify = require ('slugify');
 module.exports = {
     // Get all categories
     getAllCategories: async function(){
@@ -22,6 +22,9 @@ module.exports = {
     createCategory: async function(name){
         let newCategory = new categorySchema({
             name: name,
+            slug: slugify(name, {
+                lower: true
+            })
         })
         return await newCategory.save();
     },

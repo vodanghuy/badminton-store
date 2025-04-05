@@ -9,3 +9,5 @@ CREATE USER
    "gender": "Nam",
    "role": "User"
 }
+
+* npm i slugify
