@@ -37,6 +37,10 @@ let userSchema = mongoose.Schema({
         type:String,
         default: ""
     },
+    avatar:{
+        type: String,
+        default:""
+    },
     role:{
         type: mongoose.Types.ObjectId,
         ref: 'role',
