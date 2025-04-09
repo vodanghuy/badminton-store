@@ -51,12 +51,8 @@ router.get(
   }
 );
 // Create user
-router.post(
-  "/",
-  check_authentication,
-  check_authorization(constants.ADMIN_PERMISSION),
-  UserValidation,
-  validate,
+// check_authentication,  check_authorization(constants.ADMIN_PERMISSION),
+router.post("/",   UserValidation,  validate,
   async function (req, res, next) {
     try {
       let user = await userController.createUser(req.body);
