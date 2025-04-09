@@ -32,5 +32,15 @@ router.delete('/', check_authentication, async function(req,res,next){
         next(error)
     }
 })
-
+router.post('/checkout', check_authentication, async function(req,res,next){
+    try {   
+        let result = await cartController.checkout(req.user._id)
+        res.status(200).send({
+            message: "Thanh toán thành công",
+            data: result
+        })
+    } catch (error) {
+        next(error)
+    }
+})
 module.exports = router;

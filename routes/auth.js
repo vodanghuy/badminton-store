@@ -31,6 +31,7 @@ router.post('/login', UserValidation, validate, async function(req, res, next) {
             }
         )
             res.status(200).send({
+                success: true,
                 message: "Đăng nhập thành công",
                 data: token
             })

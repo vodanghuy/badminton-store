@@ -2143,6 +2143,7 @@ h1, h2, h3, h4, h5, h6 {
 .single-product img {
     margin-bottom: 20px;
     width: 100%;
+    min-height: 297px;
 }
 
 .single-product .product-details h6 {
@@ -2465,11 +2466,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .single-img img {
-    opacity: .2;
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
+    min-height: 70px;
+    max-height: 70px;
 }
 
 @media (max-width: 800px) {
@@ -8515,4 +8513,17 @@ li {
 .resize-img{
     height: 70px;
     width: 70px;
+}
+.category-btn{
+    background-color: #ffba00;
+    color: #fff;
+    height: 100px;
+    width: 200px;
+    font-size: 15px;
+    align-content: center;
+    border-radius: 30px;
+    text-align: center;
+}
+.logo_h{
+    margin-right: auto;
 }
