@@ -172,7 +172,7 @@
                 <div class="banner-content">
                   <h1>Bạn muốn trở thành lông thủ?</h1>
                   <div class="add-bag d-flex align-items-center">
-                    <a class="primary-btn" href="">Mua sắm ngay</a>
+                    <a onclick="buyNow(event)" class="primary-btn" href="">Mua sắm ngay</a>
                   </div>
                 </div>
               </div>
@@ -1237,6 +1237,16 @@
         function logout() {
             localStorage.removeItem('token');
             localStorage.removeItem('user');
+        }
+        function buyNow(event){
+          event.preventDefault();
+          const token = localStorage.getItem('token');
+          if(!token){
+            window.location.href = './login.html'
+          }
+          else{
+            window.location.href = './products.html'
+          }
         }
     </script>
   </body>

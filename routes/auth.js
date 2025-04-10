@@ -49,7 +49,7 @@ router.post('/login', UserValidation, validate, async function(req, res, next) {
 router.post('/signup',UserValidation, validate, async function(req, res, next) {
   try {
     let user = await userController.createUser(req.body)
-    res.status(201).json({
+    res.status(200).json({
       success: true,
       data: user
     })
