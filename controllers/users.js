@@ -105,14 +105,17 @@ module.exports = {
     // Check login
     checkLogin: async function(username, password)
     {
-        let user = await userSchema.findOne({ username: username })
+        let user = await userSchema.findOne({ username: username }).populate({
+            path: 'role',
+            select: 'name'
+        })
         if(!user) {
             throw new Error("Tên tài khoản hoặc mật khẩu không hợp lệ")
         }
         else
         {
             if(bcrypt.compareSync(password, user.password)){
-                return user._id
+                return user
             }
             else
             {

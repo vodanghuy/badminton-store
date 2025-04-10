@@ -104,27 +104,32 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <!--            <li class="nav-item"><a href="login.html" class="cart" id="cart"><span class="ti-bag"></span></a></li>-->
-            <li>
+            <li id="cartBtn" class="hidden">
               <a class="nav-link" href="#" id="cart"
                 ><i
                   class="ti-bag"
-                  data-toggle="modal"
-                  data-target="#cart1"
                 ></i
-                ><span class="badge"
-                  ><p><span class="total-count"></span></p></span
-              ></a>
-            </li>
-
-            <li class="nav-item">
-              <a href="login.html" class="cart"
-                ><span class="ti-user"></span
-              ></a>
+                ></a>
             </li>
             <li class="nav-item">
               <button class="search">
                 <span class="lnr lnr-magnifier" id="search"></span>
               </button>
+            </li>
+            <li class="nav-item hidden" id ="profileBtn">
+              <a href="profile.html" class="cart"
+                ><span id="username" class="mr-2"></span></span
+              ></a>
+            </li>
+            <li class="nav-item hidden" id="logoutBtn">
+              <a href="index.html" class="cart"
+                ><span class="mr-2"></span><span class="fa fa-sign-out"></span
+              ></a>
+            </li>
+            <li class="nav-item" id ="loginBtn">
+              <a href="login.html" class="cart"
+                ><span class="mr-2"> Đăng nhập</span><span class="ti-user"></span
+              ></a>
             </li>
           </ul>
         </div>
@@ -1211,5 +1216,28 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
     <script src="/public/user-assets/js/gmaps.min.js"></script>
     <script src="/public/user-assets/js/main.js"></script>
+    <script>
+      // Kiểm tra xem người dùng đã đăng nhập chưa
+      const loginBtn = document.getElementById('loginBtn');
+      const logoutBtn = document.getElementById('logoutBtn');
+      const profileBtn = document.getElementById('profileBtn');
+      const cartBtn = document.getElementById('cartBtn');
+      const token = localStorage.getItem('token');
+        if (!token) {
+            // window.location.href = '/';
+        } else {
+            loginBtn.classList.add('hidden')
+            logoutBtn.classList.remove('hidden')
+            profileBtn.classList.remove('hidden')
+            cartBtn.classList.remove('hidden')
+            const user = JSON.parse(localStorage.getItem('user'));
+            document.getElementById('username').textContent = 'Xin chào, ' + user.fullName;
+        }
+        logoutBtn.addEventListener('click', logout);
+        function logout() {
+            localStorage.removeItem('token');
+            localStorage.removeItem('user');
+        }
+    </script>
   </body>
 </html>

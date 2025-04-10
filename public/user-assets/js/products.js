@@ -24,8 +24,8 @@ function convertFromObjToHTML(product){
     string += `<div class="price"><h6>${product.price.toLocaleString('vi-VN')}₫</h6>`
     string += `<div class="prd-bottom">
 
-										<a href="" class="social-info add-to-cart"
-										   data-name="Giày Boot Nam Đế Cao Màu Vàng PALA GN400" data-price="550">
+										<a onclick="addToCart('${product._id}', event);return false" href="" class="social-info add-to-cart"
+										   data-name="">
 											<span class="ti-bag"></span>
 											<p class="hover-text">thêm vào giỏ</p>
 										</a>

@@ -51,36 +51,29 @@ module.exports = {
         
     },
     // Add product to cart
-    addProductToCart: async function(userId, products){
+    addProductToCart: async function(userId, productId){
         let cart = await cartSchema.findOne({userId: userId});
-        for(const p of products){
-            let product = await productSchema.findById(p.productId)
+            let product = await productSchema.findById(productId)
             if(!product){
                 throw new Error('Sản phẩm không tồn tại')
             }
-            if(product.quantity < p.quantity){
-                throw new Error('Số lượng sản phẩm ${p.productId} không đủ');
+            if(product.quantity == 0){
+                throw new Error('Sản phẩm đã hết hàng')
             }
-            if(p.quantity <= 0){
-                throw new Error('Số lượng sản phẩm không được bé hơn hoặc bằng không');
-            }
-        }
-        for (const p of products) {
-            let product = cart.products.find(i => i.productId == p.productId)
-            if(product){
-                if(!product.quantity){
-                    product.quantity += 1
-                    //await productController.updateQuantity(p.productId, 1)
-                }
-                else{
-                    product.quantity += p.quantity
-                    //await productController.updateQuantity(p.productId, p.quantity)
-                }
+            let existingProduct = cart.products.find(i => i.productId == productId)
+            if(existingProduct){
+                if (product.quantity < existingProduct.quantity + 1) {
+                    throw new Error('Số lượng sản phẩm trong kho không đủ');
+                  }
+                existingProduct.quantity += 1
             }
             else{
-                cart.products.push(p)
+                cart.products.push({
+                    productId: product._id,
+                    quantity: 1
+                })
             }
-        }
+        
         return await cart.save()
     },
     checkout: async function(userId){

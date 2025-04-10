@@ -10,10 +10,11 @@ router.get('/',check_authentication, function(req, res, next) {
 });
 router.post('/', check_authentication, async function(req,res,next){
     try {
-        let products = req.body.products
+        let productId = req.body.productId
         let userId = req.user._id
-        let result = await cartController.addProductToCart(userId, products)
+        let result = await cartController.addProductToCart(userId, productId)
         res.status(200).send({
+            success: true,
             message: "Thêm sản phẩm vào giỏ hàng thành công",
             data: result
         })

@@ -28,8 +28,10 @@ app.set('view engine', 'pug');
 
 // Cho phép truy cập api từ các nguồn khác nhau
 app.use(cors({
-  origin: '*'
-}));
+  origin: 'http://127.0.0.1:5501', // Origin của frontend
+  credentials: true
+}
+));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

@@ -8527,3 +8527,6 @@ li {
 .logo_h{
     margin-right: auto;
 }
+.hidden{
+    display: none;
+}

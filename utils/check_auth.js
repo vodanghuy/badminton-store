@@ -16,9 +16,10 @@ module.exports = {
     }
     else {
       // Get token from header
-      let token = req.headers.authorization.split(" ")[1];
+      token = req.headers.authorization.split(" ")[1];
     }
     if(!token){
+      console.log(token);
         return next(new Error("Bạn chưa đăng nhập"));
     }
     // Get user id from token

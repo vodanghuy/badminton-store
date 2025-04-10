@@ -21,7 +21,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
         });
         const result = await response.json();
         if(result.success){
-            localStorage.setItem('token', result.cookie);
+            localStorage.setItem('token', result.data);
             localStorage.setItem('user', JSON.stringify(result.user));
             
                 window.location.href = '/views/users/index.html'; // Trang sau khi đăng nhập
