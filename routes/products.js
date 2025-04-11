@@ -135,7 +135,7 @@ router.post("/change_image/:id",upload.single("image"),async function (req, res,
       await product.save();
       res.status(200).send({
         success: true,
-        message: product,
+        data: product.imageURL,
       });
     }
   }

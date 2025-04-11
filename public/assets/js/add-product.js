@@ -56,13 +56,25 @@ document.getElementById("add-product-form").addEventListener("submit", async fun
                 price: price,
                 quantity: quantity,
                 description: description ? description : "",
-                imageURL: imageURL.name
+                imageURL: ""
             })
         })
         const result = await response.json()
         if(result.success){
-            alert(result.message)
-            window.location.href = '/views/admins/products/product.html'; // Trang sau khi đăng nhập
+            const formData = new FormData();
+            formData.append('image', imageURL);
+            const uploadResponse = await fetch(`http://localhost:3000/products/change_image/${result.data._id}`,{
+                method: 'POST',
+                body: formData,
+            })
+            const uploadResult = await uploadResponse.json()
+            if(uploadResult.success){
+                alert(result.message)
+                window.location.href = '/views/admins/products/product.html'; // Trang sau khi đăng nhập
+            }
+            else{
+                alert(uploadResult.message)
+            }
         }
         else
         {
@@ -70,6 +82,7 @@ document.getElementById("add-product-form").addEventListener("submit", async fun
         }
     } catch (error) {
         console.log(error);
+        alert(error.message)
     }
     
     })

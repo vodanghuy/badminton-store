@@ -22,7 +22,7 @@ async function loadSync(){
             document.getElementById("price").textContent = product.price.toLocaleString('vi-VN') + '₫'
             document.getElementById("quantity").textContent = product.quantity
             document.getElementById("description").textContent = product.description || "Không có mô tả"
-            document.getElementById("image").innerHTML = `<img src="/public/assets/img/products/${product.imageURL}" alt="${product.name}">`
+            document.getElementById("image").innerHTML = `<img src="${product.imageURL}" alt="${product.name}">`
         }
         else
         {
