@@ -25,7 +25,7 @@ function convertFromObjToHTML(product){
                                 <td>${product.price.toLocaleString('vi-VN')} đ</td>
                                 <td>${product.quantity}</td>
                                 <td>
-                                    <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
+                                    <button onclick="productDetail('${product._id}'); return false;" class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
                                     <button onclick="deleteProduct('${product._id}', event); return false;" class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
                                 </td>`
     return string;
@@ -50,6 +50,6 @@ async function deleteProduct(productId, event){
         console.log(error);
     }
 }
-async function productDetail(productId){
-    
+function productDetail(productId){
+    window.location.href= `/views/admins/products/product-detail.html?id=${productId}`
 }

@@ -16,7 +16,10 @@ router.get('/', async function(req, res, next) {
 router.get('/:id', async function(req, res, next) {
   try {
     let product = await productController.getProductById(req.params.id);
-    res.status(200).send(product);
+    res.status(200).send({
+      success:true,
+      data: product
+    });
   } catch (error) {
     res.status(404).send({
       message: error.message

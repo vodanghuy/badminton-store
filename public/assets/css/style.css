@@ -1154,7 +1154,9 @@ PANELS CONFIGURATIONS
 .content-panel {
 	background: #ffffff;
 	box-shadow: 0px 3px 2px #aab2bd;
-	padding: 15px 10px 10px 10px;
+	padding-top: 15px;
+	padding-bottom: 5px;
+    border-radius: 6px;
 }
 .content-panel h4 {
 	margin-left: 10px;
@@ -2297,4 +2299,20 @@ label {
 .primary-btn:hover:before {
     left: 180px;
     opacity: .3;
+}
+.product-detail img{
+    width: 100%;
+    height: auto;
+}
+.product-detail img:hover{
+    opacity: 0.5;
+}
+.product-detail{
+    padding: 20px;
+}
+.product-detail h4{
+    text-align: center;
+}
+.product-detail h5.price{
+    color: red;
 }
