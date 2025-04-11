@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var productController = require('../controllers/products');
+const { check_authentication, check_authorization } = require('../utils/check_auth');
 
 /* GET home page. */
 router.get('/', async function(req, res, next) {
@@ -52,7 +53,11 @@ router.post('/', async function(req, res, next) {
   try {
     let body = req.body;
     let newProduct = await productController.createProduct(body.name, body.price, body.description , body.quantity, body.category, body.brand, body.imageURL);
-    res.status(200).send(newProduct);
+    res.status(200).send({
+      success:true,
+      message: "Thêm sản phẩm thành công",
+      data: newProduct
+    });
   } catch (error) {
     res.status(404).send({
       message: error.message
@@ -76,7 +81,10 @@ router.put('/:id', async function(req, res, next) {
 router.delete('/:id', async function(req, res, next) {
   try {
     let deletedProduct = await productController.deleteProduct(req.params.id);
-    res.status(200).send(deletedProduct);
+    res.status(200).send({
+      success: true,
+      message: "Xóa sản phẩm thành công",
+    });
   } catch (error) {
     res.status(404).send({
       message: error.message

@@ -7,9 +7,7 @@ const brand = require("../schemas/brand");
 router.get("/", async function (req, res, next) {
   try {
     let brands = await brandController.getAllBrands();
-    res.status(200).send({
-      brands,
-    });
+    res.status(200).send(brands);
   } catch (error) {
     res.status(404).send({
       message: error.message,
