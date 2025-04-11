@@ -63,15 +63,11 @@ module.exports = {
 
     //Create product
     createProduct: async function (name, price, description, quantity, categoryI, brandI, imageURL) {
-        let category = await categorySchema.findOne({
-            name: categoryI
-        });
+        let category = await categorySchema.findById(categoryI);
         if (!category) {
             throw new Error('Danh mục không tồn tại');
         }
-        let brand = await brandSchema.findOne({
-            name: brandI
-        });
+        let brand = await brandSchema.findById(brandI);
         if (!brand) {
             throw new Error('Thương hiệu không tồn tại');
         }
