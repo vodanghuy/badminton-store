@@ -5,8 +5,16 @@ var { check_authentication, check_authorization } = require('../utils/check_auth
 var constants = require('../utils/constants');
 
 /* GET home page. */
-router.get('/',check_authentication, function(req, res, next) {
-  
+router.get('/getCart/:userId',check_authentication, async function(req, res, next) {
+  try {
+    let cart = await cartController.getCartByUserId(req.params.userId)
+    res.status(200).send({
+      success: true,
+      data: cart
+    })
+  } catch (error) {
+    next(error)
+  }
 });
 router.post('/', check_authentication, async function(req,res,next){
     try {
@@ -34,9 +42,17 @@ router.delete('/', check_authentication, async function(req,res,next){
     }
 })
 router.post('/checkout', check_authentication, async function(req,res,next){
-    try {   
-        let result = await cartController.checkout(req.user._id)
+    try {
+        let result;
+        if(req.body.userId){
+            result = await cartController.checkout(req.body.userId)
+        }
+        else
+        {
+            result = await cartController.checkout(req.user._id)
+        }
         res.status(200).send({
+            success: true,
             message: "Thanh toán thành công",
             data: result
         })

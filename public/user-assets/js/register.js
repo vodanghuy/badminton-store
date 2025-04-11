@@ -35,7 +35,7 @@ document.getElementById("registerForm").addEventListener("submit", async functio
         const result = await response.json()
         if(result.success){
             alert("Đăng ký thành công")
-            window.location.href = '/views/users/login.html'; // Trang sau khi đăng nhập
+            //window.location.href = '/views/users/login.html'; // Trang sau khi đăng nhập
         }
         else if(result.errors){
             for (const e of result.errors) {

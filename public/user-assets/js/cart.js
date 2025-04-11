@@ -1,12 +1,16 @@
 async function addToCart(productId, event){
     event.preventDefault()
     try {
-        let token = 'Bearer ' + localStorage.getItem('token')
+        let token = localStorage.getItem('token')
+        if(!token){
+            alert("Bạn chưa đăng nhập")
+            return
+        }
         let response = await fetch(`http://localhost:3000/cart`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': token
+                'Authorization': 'Bearer ' + token
             },
             body: JSON.stringify({
                 productId: productId,

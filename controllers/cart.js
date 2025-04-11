@@ -5,7 +5,9 @@ let orderSchema = require('../schemas/order')
 module.exports = {
     // Get cart by userId
     getCartByUserId: async function(userId){
-        let cart = await cartSchema.findById(userId).populate('product.productId')
+        let cart = await cartSchema.find({
+            userId: userId
+        })
         if(cart)
         {
             return cart

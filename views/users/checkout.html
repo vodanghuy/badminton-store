@@ -5,7 +5,7 @@
     <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon-->
-    <link rel="shortcut icon" href="img/fav.png">
+    <link rel="shortcut icon" src="/public/user-assets/img/fav.png">
     <!-- Author Meta -->
     <meta name="author" content="CodePixar">
     <!-- Meta Description -->
@@ -20,14 +20,14 @@
     <!--
             CSS
             ============================================= -->
-    <link rel="stylesheet" href="css/linearicons.css">
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/nice-select.css">
-    <link rel="stylesheet" href="css/nouislider.min.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/public/user-assets/css/linearicons.css">
+    <link rel="stylesheet" href="/public/user-assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="/public/user-assets/css/themify-icons.css">
+    <link rel="stylesheet" href="/public/user-assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/public/user-assets/css/nice-select.css">
+    <link rel="stylesheet" href="/public/user-assets/css/nouislider.min.css">
+    <link rel="stylesheet" href="/public/user-assets/css/bootstrap.css">
+    <link rel="stylesheet" href="/public/user-assets/css/main.css">
 </head>
 
 <body>
@@ -37,60 +37,94 @@
     <div class="main_menu">
         <nav class="navbar navbar-expand-lg navbar-light main_box">
             <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <a class="navbar-brand logo_h " href="index.html"><img src="img/logo.png" alt=""></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-                    <ul class="nav navbar-nav menu_nav ml-auto">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
-                        <li class="nav-item submenu dropdown ">
-                            <a href="category/Nam/Boots/Boots.html" class="nav-link dropdown-toggle" role="button" aria-haspopup="true"
-                               aria-expanded="false">Nam</a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item"><a class="nav-link" href="category/Nam/Boots/Boots.html">Boots</a></li>
-                                <li class="nav-item"><a class="nav-link" href="category/Nam/Sandal/Sandal.html">Sandal</a></li>
-                                <li class="nav-item"><a class="nav-link" href="category/Nam/SportShoe/SportShoe.html">Giày thể thao</a></li>
-                                <li class="nav-item"><a class="nav-link" href="category/Nam/RunningShoes/Runn1.html">Giày chạy bộ</a></li>
-                                <li class="nav-item"><a class="nav-link" href="category/Nam/SoccerShoes/Socc1.html">Giày đá banh</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item submenu dropdown ">
-                            <a href="category/Nu/Boots/Boots1.html" class="nav-link dropdown-toggle" role="button" aria-haspopup="true"
-                               aria-expanded="false">Nữ</a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item "><a class="nav-link" href="category/Nu/Boots/Boots1.html">Boots</a></li>
-                                <li class="nav-item"><a class="nav-link" href="category/Nu/Sandal/Sandal-01.html">Sandal</a></li>
-                                <li class="nav-item"><a class="nav-link" href="category/Nu/SportShoes/SportShoe-01.html">Giày thể thao</a></li>
-                                <li class="nav-item"><a class="nav-link" href="category/Nu/RunningShoes/RunningShoes-01.html">Giày chạy bộ - đi bộ</a></li>
-
-                            </ul>
-                        </li>
-                        <li class="nav-item submenu dropdown">
-                            <a href="category.html" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                               aria-expanded="false">Khuyến mãi</a>
-                        </li>
-
-                        <li class="nav-item "><a class="nav-link" href="contact.html">Liên hệ</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <!--            <li class="nav-item"><a href="login.html" class="cart" id="cart"><span class="ti-bag"></span></a></li>-->
-                        <li><a class="nav-link" href="#" id="cart"><i class="ti-bag" data-toggle="modal" data-target="#cart1"></i><span class="badge"><p><span class="total-count"></span></p></span></a></li>
-
-
-                        <li class="nav-item"><a href="login.html" class="cart"><span class="ti-user"></span></a></li>
-                        <li class="nav-item">
-                            <button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
-                        </li>
-                    </ul>
-                </div>
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div
+                class="collapse navbar-collapse offset"
+                id="navbarSupportedContent"
+              >
+              <a class="navbar-brand logo_h" href="index.html"
+                      ><b>HTL Store</b></a
+                    >
+                <ul class="nav navbar-nav menu_nav ml-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Trang chủ</a>
+                  </li>
+                  <!-- <li class="nav-item submenu dropdown">
+                              <a href="/public/user-assets/category/Nam/Boots/Boots.html" class="nav-link dropdown-toggle" role="button" aria-haspopup="true"
+                                 aria-expanded="false">Nam</a>
+                              <ul class="dropdown-menu">
+                                  <li class="nav-item"><a class="nav-link" href="/public/user-assets/category/Nam/Boots/Boots.html">Giày cầu l</a></li>
+                                  <li class="nav-item"><a class="nav-link" href="/public/user-assets/category/Nam/Sandal/Sandal.html">Áo cầu lông</a></li>
+                                  <li class="nav-item"><a class="nav-link" href="/public/user-assets/category/Nam/SportShoe/SportShoe.html">Quần cầu lông</a></li>
+                                  <li class="nav-item"><a class="nav-link" href="/public/user-assets/category/Nam/RunningShoes/Runn1.html">Giày chạy bộ</a></li>
+                                  <li class="nav-item"><a class="nav-link" href="/public/user-assets/category/Nam/SoccerShoes/Socc1.html">Giày đá banh</a></li>
+                              </ul>
+                          </li>
+                          <li class="nav-item submenu dropdown ">
+                              <a href="/public/user-assets/category/Nu/Boots/Boots1.html" class="nav-link dropdown-toggle" role="button" aria-haspopup="true"
+                                 aria-expanded="false">Nữ</a>
+                              <ul class="dropdown-menu">
+                                  <li class="nav-item "><a class="nav-link" href="/public/user-assets/category/Nu/Boots/Boots1.html">Boots</a></li>
+                                  <li class="nav-item"><a class="nav-link" href="/public/user-assets/category/Nu/Sandal/Sandal-01.html">Sandal</a></li>
+                                  <li class="nav-item"><a class="nav-link" href="/public/user-assets/category/Nu/SportShoes/SportShoe-01.html">Giày thể thao</a></li>
+                                  <li class="nav-item"><a class="nav-link" href="/public/user-assets/category/Nu/RunningShoes/RunningShoes-01.html">Giày chạy bộ - đi bộ</a></li>
+      
+                              </ul>
+                          </li> -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="products.html">Sản phẩm</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Liên hệ</a>
+                  </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                  <!--            <li class="nav-item"><a href="login.html" class="cart" id="cart"><span class="ti-bag"></span></a></li>-->
+                  <li id="cartBtn" class="hidden">
+                    <a class="nav-link" href="#" id="cart"
+                      ><i
+                        class="ti-bag"
+                      ></i
+                      ></a>
+                  </li>
+                  <li class="nav-item">
+                    <button class="search">
+                      <span class="lnr lnr-magnifier" id="search"></span>
+                    </button>
+                  </li>
+                  <li class="nav-item hidden" id ="profileBtn">
+                    <a href="profile.html" class="cart"
+                      ><span id="username" class="mr-2"></span></span
+                    ></a>
+                  </li>
+                  <li class="nav-item hidden" id="logoutBtn">
+                    <a href="index.html" class="cart"
+                      ><span class="mr-2"></span><span class="fa fa-sign-out"></span
+                    ></a>
+                  </li>
+                  <li class="nav-item" id ="loginBtn">
+                    <a href="login.html" class="cart"
+                      ><span class="mr-2"> Đăng nhập</span><span class="ti-user"></span
+                    ></a>
+                  </li>
+                </ul>
+              </div>
             </div>
-        </nav>
+          </nav>
     </div>
 
     <div class="search_input" id="search_input_box">
@@ -145,24 +179,20 @@
                     <h3>Chi tiết hóa đơn</h3>
                     <form class="row contact_form" action="#" method="post" novalidate="novalidate" id="checkoutForm">
                         <div class="col-md-6 form-group p_star">
-                            <input type="text" class="form-control" id="first" name="name" placeholder="Họ*">
+                            <input type="text" class="form-control" id="fullName" name="name" placeholder="" disabled>
                             <p class="form-message"></p>
                         </div>
                         <div class="col-md-6 form-group p_star">
-                            <input type="text" class="form-control" id="last" name="name" placeholder="Tên*">
+                            <input type="text" class="form-control" id="phoneNumber" name="phone" placeholder="" disabled>
                             <p class="form-message"></p>
                         </div>
                         <div class="col-md-6 form-group p_star">
-                            <input type="text" class="form-control" id="phone" name="phone" placeholder="Số điện thoại*">
-                            <p class="form-message"></p>
-                        </div>
-                        <div class="col-md-6 form-group p_star">
-                            <input type="text" class="form-control" id="email" name="email" placeholder="Email*">
+                            <input type="text" class="form-control" id="email" name="email" placeholder="" disabled>
                             <p class="form-message"></p>
                         </div>
 
                         <div class="col-md-12 form-group p_star">
-                            <input type="text" class="form-control" id="address" name="address" placeholder="Địa chỉ*">
+                            <input type="text" class="form-control" id="address" name="address" placeholder="" disabled>
                             <p class="form-message"></p>
                         </div>
 
@@ -188,16 +218,12 @@
                 <div class="col-lg-4">
                     <div class="order_box">
                         <h2>Đơn hàng của bạn</h2>
-                        <ul class="list">
-                            <li><a href="#">Sản phẩm <span>Giá</span></a></li>
-                            <li><a href="#">Giày Boot Nam Đế Cao Màu Vàng PALA GN400 <span class="middle">x 01</span> <span class="last">550.000đ</span></a></li>
-                            <li><a href="#">Giày boot nam màu trơn Không có dây kéo<span class="middle">x 01</span> <span class="last">806.000đ</span></a></li>
-                            <li><a href="#">Nam Giày ống Chelsea Suedette Mặc vào <span class="middle">x 01</span> <span class="last">623.000đ</span></a></li>
+                        <ul id="product-list" class="list">
                         </ul>
                         <ul class="list list_2">
-                            <li><a href="#">Tổng cộng <span>1.979.000đ</span></a></li>
-                            <li><a href="#">Phí Ship <span>20.000đ</span></a></li>
-                            <li><a href="#">Tổng cộng <span>1.999.000đ</span></a></li>
+                            <li><a href="#">Tổng cộng <span id="totalAmount"></span></a></li>
+                            <!-- <li><a href="#">Phí Ship <span>20.000đ</span></a></li>
+                            <li><a href="#">Tổng cộng <span>1.999.000đ</span></a></li> -->
                         </ul>
                         <div class="payment_item">
                             <div class="radion_btn">
@@ -212,7 +238,7 @@
                             <div class="radion_btn">
                                 <input type="radio" id="f-option6" name="selector">
                                 <label for="f-option6">Trả thẻ </label>
-                                <img src="img/product/card.jpg" alt="">
+                                <img src="/public/assets/img/product/card.jpg" alt="">
                                 <div class="check"></div>
                             </div>
 <!--                            <p>Pay via PayPal; you can pay with your credit card if you don’t have a PayPal-->
@@ -223,7 +249,7 @@
                             <label for="f-option4">Tôi đã đọc và chấp nhận </label>
                             <a href="#">mọi điều khoản*</a>
                         </div>
-                        <a class="primary-btn" href="#">Xác nhận</a>
+                        <a onclick="checkout(event)" id="confirmBtn" class="primary-btn" href="#">Xác nhận</a>
                     </div>
                 </div>
             </div>
@@ -294,22 +320,59 @@
 </div>
 
 <!--java script -->
-<script src="js/vendor/jquery-2.2.4.min.js"></script>
-<script src="../../../https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
-        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
-        crossorigin="anonymous"></script>
-<script src="js/vendor/bootstrap.min.js"></script>
-<script src="js/jquery.ajaxchimp.min.js"></script>
-<script src="js/jquery.nice-select.min.js"></script>
-<script src="js/jquery.sticky.js"></script>
-<script src="js/nouislider.min.js"></script>
-<script src="js/countdown.js"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<!--gmaps Js-->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
-<script src="js/gmaps.min.js"></script>
-<script src="js/main.js"></script>
+<script src="/public/user-assets/js/vendor/jquery-2.2.4.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+      integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/public/user-assets/js/vendor/bootstrap.min.js"></script>
+    <script src="/public/user-assets/js/jquery.ajaxchimp.min.js"></script>
+    <script src="/public/user-assets/js/jquery.nice-select.min.js"></script>
+    <script src="/public/user-assets/js/jquery.sticky.js"></script>
+    <script src="/public/user-assets/js/nouislider.min.js"></script>
+    <script src="/public/user-assets/js/countdown.js"></script>
+    <script src="/public/user-assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="/public/user-assets/js/owl.carousel.min.js"></script>
+
+    <!--gmaps Js-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+    <script src="/public/user-assets/js/gmaps.min.js"></script>
+    <script src="/public/user-assets/js/main.js"></script>
+    <script src="/public/user-assets/js/checkout.js"></script>
+    <script>
+      // Kiểm tra xem người dùng đã đăng nhập chưa
+      const loginBtn = document.getElementById('loginBtn');
+      const logoutBtn = document.getElementById('logoutBtn');
+      const profileBtn = document.getElementById('profileBtn');
+      const cartBtn = document.getElementById('cartBtn');
+      const token = localStorage.getItem('token');
+        if (!token) {
+            // window.location.href = '/';
+        } else {
+            loginBtn.classList.add('hidden')
+            logoutBtn.classList.remove('hidden')
+            profileBtn.classList.remove('hidden')
+            cartBtn.classList.remove('hidden')
+            const user = JSON.parse(localStorage.getItem('user'));
+            document.getElementById('username').textContent = 'Xin chào, ' + user.fullName;
+        }
+        logoutBtn.addEventListener('click', logout);
+        function logout() {
+            localStorage.removeItem('token');
+            localStorage.removeItem('user');
+        }
+        function buyNow(event){
+          event.preventDefault();
+          const token = localStorage.getItem('token');
+          if(!token){
+            window.location.href = './login.html'
+          }
+          else{
+            window.location.href = './products.html'
+          }
+        }
+    </script>
 
 <script>
     Validator({

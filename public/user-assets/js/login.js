@@ -23,9 +23,13 @@ document.getElementById("contactForm").addEventListener("submit", async function
         if(result.success){
             localStorage.setItem('token', result.data);
             localStorage.setItem('user', JSON.stringify(result.user));
-            
-                window.location.href = '/views/users/index.html'; // Trang sau khi đăng nhập
-            
+            if(result.user.role.name === 'Admin'){
+                window.location.href = '/views/admins/index.html'; // Trang sau khi đăng nhập
+            }
+            if(result.user.role.name === 'User'){
+                // window.location.href = '/views/users/index.html'; // Trang sau khi đăng nhập
+                alert("Đăng nhập thành công")
+            }
         }
         else{
             messageElement.style.color = 'red';
