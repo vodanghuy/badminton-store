@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+  <head>
+    <!-- Mobile Specific Meta -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="/public/user-assets/img/fav.png" />
+    <!-- Author Meta -->
+    <meta name="author" content="CodePixar" />
+    <!-- Meta Description -->
+    <meta name="description" content="" />
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="" />
+    <!-- meta character set -->
+    <meta charset="UTF-8" />
+    <!-- Site Title -->
+    <title>HTL Store</title>
+    <!--
+        /public/user-assets/css
+        ============================================= -->
+    <link rel="stylesheet" href="/public/user-assets/css/linearicons.css" />
+    <link
+      rel="stylesheet"
+      href="/public/user-assets/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="/public/user-assets/css/themify-icons.css" />
+    <link rel="stylesheet" href="/public/user-assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="/public/user-assets/css/owl.carousel.css" />
+    <link rel="stylesheet" href="/public/user-assets/css/nice-select.css" />
+    <link rel="stylesheet" href="/public/user-assets/css/nouislider.min.css" />
+    <link rel="stylesheet" href="/public/user-assets/css/ion.rangeSlider.css" />
+    <link
+      rel="stylesheet"
+      href="/public/user-assets/css/ion.rangeSlider.skinFlat.css"
+    />
+    <link rel="stylesheet" href="/public/user-assets/css/magnific-popup.css" />
+
+    <link rel="stylesheet" href="/public/user-assets/css/main.css" />
+  </head>
+
+  <body>
+    <!-- Start Header Area -->
+<header class="header_area sticky-header">
+  <div class="main_menu">
+    <nav class="navbar navbar-expand-lg navbar-light main_box">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div
+          class="collapse navbar-collapse offset"
+          id="navbarSupportedContent"
+        >
+        <a class="navbar-brand logo_h" href="index.html"
+                ><b>HTL Store</b></a
+              >
+          <ul class="nav navbar-nav menu_nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Trang chủ</a>
+            </li>
+            <!-- <li class="nav-item submenu dropdown">
+                        <a href="/public/user-assets/category/Nam/Boots/Boots.html" class="nav-link dropdown-toggle" role="button" aria-haspopup="true"
+                           aria-expanded="false">Nam</a>
+                        <ul class="dropdown-menu">
+                            <li class="nav-item"><a class="nav-link" href="/public/user-assets/category/Nam/Boots/Boots.html">Giày cầu l</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/public/user-assets/category/Nam/Sandal/Sandal.html">Áo cầu lông</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/public/user-assets/category/Nam/SportShoe/SportShoe.html">Quần cầu lông</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/public/user-assets/category/Nam/RunningShoes/Runn1.html">Giày chạy bộ</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/public/user-assets/category/Nam/SoccerShoes/Socc1.html">Giày đá banh</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item submenu dropdown ">
+                        <a href="/public/user-assets/category/Nu/Boots/Boots1.html" class="nav-link dropdown-toggle" role="button" aria-haspopup="true"
+                           aria-expanded="false">Nữ</a>
+                        <ul class="dropdown-menu">
+                            <li class="nav-item "><a class="nav-link" href="/public/user-assets/category/Nu/Boots/Boots1.html">Boots</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/public/user-assets/category/Nu/Sandal/Sandal-01.html">Sandal</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/public/user-assets/category/Nu/SportShoes/SportShoe-01.html">Giày thể thao</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/public/user-assets/category/Nu/RunningShoes/RunningShoes-01.html">Giày chạy bộ - đi bộ</a></li>
+
+                        </ul>
+                    </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="products.html">Sản phẩm</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Liên hệ</a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <!--            <li class="nav-item"><a href="login.html" class="cart" id="cart"><span class="ti-bag"></span></a></li>-->
+            <li id="cartBtn" class="hidden">
+              <a class="nav-link" href="#" id="cart"
+                ><i
+                  class="ti-bag"
+                ></i
+                ></a>
+            </li>
+            <li class="nav-item">
+              <button class="search">
+                <span class="lnr lnr-magnifier" id="search"></span>
+              </button>
+            </li>
+            <li class="nav-item hidden" id ="profileBtn">
+              <a href="profile.html" class="cart"
+                ><span id="username" class="mr-2"></span></span
+              ></a>
+            </li>
+            <li class="nav-item hidden" id="logoutBtn">
+              <a href="index.html" class="cart"
+                ><span class="mr-2"></span><span class="fa fa-sign-out"></span
+              ></a>
+            </li>
+            <li class="nav-item" id ="loginBtn">
+              <a href="login.html" class="cart"
+                ><span class="mr-2"> Đăng nhập</span><span class="ti-user"></span
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div class="search_input" id="search_input_box">
+    <div class="container">
+      <form class="d-flex justify-content-between">
+        <input
+          type="text"
+          class="form-control"
+          id="search_input"
+          placeholder="Tìm kiếm"
+        />
+        <button type="submit" class="btn"></button>
+        <span
+          class="lnr lnr-cross"
+          id="close_search"
+          title="Close Search"
+        ></span>
+      </form>
+    </div>
+  </div>
+</header>
+<!-- End Header Area -->
+
+    <!--back to top-->
+    <a href="#" class="cd-top">Back To Top</a>
+    <!--end back to top-->
+
+    <!-- start banner Area -->
+    <section class="banner-area">
+      <div class="container">
+        <div class="row fullscreen align-items-center justify-content-start">
+          <div class="col-lg-12">
+            <div class="row single-slide align-items-center d-flex">
+              <div class="col-lg-5 col-md-6">
+                <div class="banner-content">
+                  <h1>Bạn muốn trở thành lông thủ?</h1>
+                  <div class="add-bag d-flex align-items-center">
+                    <a onclick="buyNow(event)" class="primary-btn" href="">Mua sắm ngay</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-7">
+                <div class="banner-img">
+                  <img
+                    class="img-fluid"
+                    src="/public/user-assets/img/banner/shuttlecock.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End banner Area -->
+
+    <!-- start features Area -->
+    <section class="features-area section_gap">
+      <div class="container">
+        <div class="row features-inner">
+          <!-- single features -->
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="single-features">
+              <div class="f-icon">
+                <img
+                  src="/public/user-assets/img/features/f-icon1.png"
+                  alt=""
+                />
+              </div>
+              <h6>Miễn phí vận chuyển</h6>
+              <!--                    <p>Miễn phí vận chuyển cho tất cả các đơn đặt hàng</p>-->
+            </div>
+          </div>
+          <!-- single features -->
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="single-features">
+              <div class="f-icon">
+                <img
+                  src="/public/user-assets/img/features/f-icon2.png"
+                  alt=""
+                />
+              </div>
+              <h6>Chính sách hoàn trả</h6>
+              <!--                    <p>Free Shipping on all order</p>-->
+            </div>
+          </div>
+          <!-- single features -->
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="single-features">
+              <div class="f-icon">
+                <img
+                  src="/public/user-assets/img/features/f-icon3.png"
+                  alt=""
+                />
+              </div>
+              <h6>Hỗ trợ 24/7</h6>
+              <!--                    <p>Free Shipping on all order</p>-->
+            </div>
+          </div>
+          <!-- single features -->
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="single-features">
+              <div class="f-icon">
+                <img
+                  src="/public/user-assets/img/features/f-icon4.png"
+                  alt=""
+                />
+              </div>
+              <h6>Phương thức thanh toán</h6>
+              <!--                    <p>Free Shipping on all order</p>-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end features Area -->
+
+    <!-- Start category Area -->
+    <section class="category-area">
+      <div class="container">
+        <div class="row justify-content-center">
+          <h1 class="mb-5"><b>Sản phẩm nổi bật</b></h1>
+          <div class="row">
+            <!-- single product -->
+            <div class="col-lg-3 col-md-6">
+              <div class="single-product">
+                <img
+                  class="img-fluid"
+                  src="/public/user-assets/img/featured-products/vot-cau-long-yonex-astrox-88d-pro-2024-chinh-hang_1710988318.jpg"
+                  alt=""
+                />
+                <div class="product-details">
+                  <h6>Vợt Cầu Lông Yonex Astrox 88D Pro 2024</h6>
+                  <div class="price">
+                    <h6>4.529.000 ₫</h6>
+                    <h6 class="l-through">5.434.800 ₫
+                    </h6>
+                  </div>
+                  <div class="prd-bottom">
+                    <a
+                      href=""
+                      class="social-info add-to-cart"
+                      data-name="M1"
+                      data-price="189"
+                    >
+                      <span class="ti-bag"></span>
+                      <p class="hover-text">Thêm vào giỏ</p>
+                    </a>
+                    <a href="" class="social-info">
+                      <span class="lnr lnr-move"></span>
+                      <p class="hover-text">Xem thêm</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- single product -->
+            <div class="col-lg-3 col-md-6">
+                <div class="single-product">
+                  <img 
+                    class="img-fluid"
+                    src="/public/user-assets/img/featured-products/vot-cau-long-lining-axforce-100-vang-golden-kirin-noi-dia-4.jpg"
+                    alt=""
+                  />
+                  <div class="product-details">
+                    <h6>Vợt Cầu Lông Lining Axforce 100</h6>
+                    <div class="price">
+                      <h6>4.600.000 ₫</h6>
+                      <h6 class="l-through">4.850.000 ₫
+                      </h6>
+                    </div>
+                    <div class="prd-bottom">
+                      <a
+                        href=""
+                        class="social-info add-to-cart"
+                        data-name="M1"
+                        data-price="189"
+                      >
+                        <span class="ti-bag"></span>
+                        <p class="hover-text">Thêm vào giỏ</p>
+                      </a>
+                      <a href="" class="social-info">
+                        <span class="lnr lnr-move"></span>
+                        <p class="hover-text">Xem thêm</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!-- single product -->
+            <div class="col-lg-3 col-md-6">
+                <div class="single-product">
+                  <img 
+                    class="img-fluid"
+                    src="/public/user-assets/img/featured-products/giay-cau-long-yonex-power-cushion-comfort-z3-women-blkmin-chinh-hang_1732757364.jpg"
+                    alt=""
+                  />
+                  <div class="product-details">
+                    <h6>Giày cầu lông Yonex Power Cushion Comfort Z3 Women (BLKMIN) chính hãng</h6>
+                    <div class="price">
+                      <h6>2.799.000 ₫</h6>
+                      <h6 class="l-through">3.358.800 ₫
+                      </h6>
+                    </div>
+                    <div class="prd-bottom">
+                      <a
+                        href=""
+                        class="social-info add-to-cart"
+                        data-name="M1"
+                        data-price="189"
+                      >
+                        <span class="ti-bag"></span>
+                        <p class="hover-text">Thêm vào giỏ</p>
+                      </a>
+                      <a href="" class="social-info">
+                        <span class="lnr lnr-move"></span>
+                        <p class="hover-text">Xem thêm</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!-- single product -->
+            <div class="col-lg-3 col-md-6">
+                <div class="single-product">
+                  <img
+                    class="img-fluid"
+                    src="/public/user-assets/img/featured-products/giay-cau-long-lining-ayau005-2-olympic-paris-2024-noi-dia-trung-4_1723688939.jpg"
+                    alt=""
+                  />
+                  <div class="product-details">
+                    <h6>Giày cầu lông Lining AYAU005-2 Olympic Paris 2024</h6>
+                    <div class="price">
+                      <h6>2.990.000 ₫</h6>
+                      <h6 class="l-through">3.588.000 ₫
+                      </h6>
+                    </div>
+                    <div class="prd-bottom">
+                      <a
+                        href=""
+                        class="social-info add-to-cart"
+                        data-name="M1"
+                        data-price="189"
+                      >
+                        <span class="ti-bag"></span>
+                        <p class="hover-text">Thêm vào giỏ</p>
+                      </a>
+                      <a href="" class="social-info">
+                        <span class="lnr lnr-move"></span>
+                        <p class="hover-text">Xem thêm</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!-- single product -->
+            
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End category Area -->
+    <!-- Start category Area -->
+    <section class="category-area">
+        <div class="container">
+          <div class="row justify-content-center">
+            <h1 class="mb-5"><b>Danh mục sản phẩm</b></h1>
+            <div class="row">
+              <!-- single product -->
+              <div class="col-lg-3 col-md-6 single-product d-flex">
+                <a class="primary-btn category-btn" href="">Vợt cầu lông</a>
+              </div>
+              <!-- single product -->
+              <div class="col-lg-3 col-md-6 single-product d-flex">
+                <a class="primary-btn category-btn" href="">Giày cầu lông</a>
+              </div>
+              <!-- single product -->
+              <div class="col-lg-3 col-md-6 single-product d-flex">
+                <a class="primary-btn category-btn" href="">Áo cầu lông</a>
+              </div>
+              <!-- single product -->
+              <div class="col-lg-3 col-md-6 single-product d-flex">
+                <a class="primary-btn category-btn" href="">Quần cầu lông</a>
+              </div>
+              <!-- single product -->
+              <div class="col-lg-3 col-md-6 single-product d-flex">
+                <a class="primary-btn category-btn" href="">Váy cầu lông</a>
+              </div>
+              <!-- single product -->
+              <div class="col-lg-3 col-md-6 single-product d-flex">
+                <a class="primary-btn category-btn" href="">Túi vợt cầu lông</a>
+              </div>
+              <!-- single product -->
+              <div class="col-lg-3 col-md-6 single-product d-flex">
+                <a class="primary-btn category-btn" href="">Balo cầu lông</a>
+              </div>
+              <div class="col-lg-3 col-md-6 single-product d-flex">
+                <a class="primary-btn category-btn" href="">Phụ kiện cầu lông</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End category Area -->
+    <!-- start product Area -->
+    <section class="owl-carousel active-product-area section_gap">
+      <!-- single product slide -->
+      <div class="single-product-slider">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-6 text-center">
+              <div class="section-title">
+                <h1>Sản phẩm mới</h1>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <!-- single product -->
+            <div class="col-lg-3 col-md-6">
+              <div class="single-product">
+                <img
+                  class="img-fluid"
+                  src="/public/user-assets/img/product/p1.jpg"
+                  alt=""
+                />
+                <div class="product-details">
+                  <h6>M1</h6>
+                  <div class="price">
+                    <h6>189.000đ</h6>
+                    <h6 class="l-through">210.000đ</h6>
+                  </div>
+                  <div class="prd-bottom">
+                    <a
+                      href=""
+                      class="social-info add-to-cart"
+                      data-name="M1"
+                      data-price="189"
+                    >
+                      <span class="ti-bag"></span>
+                      <p class="hover-text">Thêm vào giỏ</p>
+                    </a>
+                    <a href="" class="social-info">
+                      <span class="lnr lnr-heart"></span>
+                      <p class="hover-text">Thêm vào yêu thích</p>
+                    </a>
+                    <a href="" class="social-info">
+                      <span class="lnr lnr-move"></span>
+                      <p class="hover-text">Xem thêm</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- single product -->
+            <div class="col-lg-3 col-md-6">
+              <div class="single-product">
+                <img
+                  class="img-fluid"
+                  src="/public/user-assets/img/product/p2.jpg"
+                  alt=""
+                />
+                <div class="product-details">
+                  <h6>M2</h6>
+                  <div class="price">
+                    <h6>189.000đ</h6>
+                    <h6 class="l-through">189.000đ</h6>
+                  </div>
+                  <div class="prd-bottom">
+                    <a
+                      href=""
+                      class="social-info add-to-cart"
+                      data-name="M2"
+                      data-price="189"
+                    >
+                      <span class="ti-bag"></span>
+                      <p class="hover-text">Thêm vào giỏ</p>
+                    </a>
+                    <a href="" class="social-info">
+                      <span class="lnr lnr-heart"></span>
+                      <p class="hover-text">Thêm vào yêu thích</p>
+                    </a>
+                    <a href="" class="social-info">
+                      <span class="lnr lnr-move"></span>
+                      <p class="hover-text">Xem thêm</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- single product -->
+            <div class="col-lg-3 col-md-6">
+              <div class="single-product">
+                <img
+                  class="img-fluid"
+                  src="/public/user-assets/img/product/p3.jpg"
+                  alt=""
+                />
+                <div class="product-details">
+                  <h6>M3</h6>
+                  <div class="price">
+                    <h6>189.000đ</h6>
+                    <h6 class="l-through">210.000đ</h6>
+                  </div>
+                  <div class="prd-bottom">
+                    <a
+                      href=""
+                      class="social-info add-to-cart"
+                      data-name="M3"
+                      data-price="189"
+                    >
+                      <span class="ti-bag"></span>
+                      <p class="hover-text">Thêm vào giỏ</p>
+                    </a>
+                    <a href="" class="social-info">
+                      <span class="lnr lnr-heart"></span>
+                      <p class="hover-text">Thêm vào yêu thích</p>
+                    </a>
+                    <a href="" class="social-info">
+                      <span class="lnr lnr-move"></span>
+                      <p class="hover-text">Xem thêm</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- single product -->
+            <div class="col-lg-3 col-md-6">
+              <div class="single-product">
+                <img
+                  class="img-fluid"
+                  src="/public/user-assets/img/product/p4.jpg"
+                  alt=""
+                />
+                <div class="product-details">
+                  <h6>M4</h6>
+                  <div class="price">
+                    <h6>189.000đ</h6>
+                    <h6 class="l-through">210.000đ</h6>
+                  </div>
+                  <div class="prd-bottom">
+                    <a
+                      href=""
+                      class="social-info add-to-cart"
+                      data-name="M4"
+                      data-price="189"
+                    >
+                      <span class="ti-bag"></span>
+                      <p class="hover-text">Thêm vào giỏ</p>
+                    </a>
+                    <a href="" class="social-info">
+                      <span class="lnr lnr-heart"></span>
+                      <p class="hover-text">Thêm vào yêu thích</p>
+                    </a>
+                    <a href="" class="social-info">
+                      <span class="lnr lnr-move"></span>
+                      <p class="hover-text">Xem thêm</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- single product -->
+            <div class="col-lg-3 col-md-6">
+              <div class="single-product">
+                <img
+                  class="img-fluid"
+                  src="/public/user-assets/img/product/p5.jpg"
+                  alt=""
+                />
+                <div class="product-details">
+                  <h6>M5</h6>
+                  <div class="price">
+                    <h6>189.000đ</h6>
+                    <h6 class="l-through">210.000đ</h6>
+                  </div>
+                  <div class="prd-bottom">
+                    <a
+                      href=""
+                      class="social-info add-to-cart"
+                      data-name="M5"
+                      data-price="189"
+                    >
+                      <span class="ti-bag"></span>
+                      <p class="hover-text">Thêm vào giỏ</p>
+                    </a>
+                    <a href="" class="social-info">
+                      <span class="lnr lnr-heart"></span>
+                      <p class="hover-text">Thêm vào yêu thích</p>
+                    </a>
+
+                    <a href="" class="social-info">
+                      <span class="lnr lnr-move"></span>
+                      <p class="hover-text">Xem thêm</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- single product -->
+            <div class="col-lg-3 col-md-6">
+              <div class="single-product">
+                <img
+                  class="img-fluid"
+                  src="/public/user-assets/img/product/p6.jpg"
+                  alt=""
+                />
+                <div class="product-details">
+                  <h6>M6</h6>
+                  <div class="price">
+                    <h6>189.000đ</h6>
+                    <h6 class="l-through">210.000đ</h6>
+                  </div>
+                  <div class="prd-bottom">
+                    <a
+                      href=""
+                      class="social-info add-to-cart"
+                      data-name="M6"
+                      data-price="189"
+                    >
+                      <span class="ti-bag"></span>
+                      <p class="hover-text">Thêm vào giỏ</p>
+                    </a>
+                    <a href="" class="social-info">
+                      <span class="lnr lnr-heart"></span>
+                      <p class="hover-text">Thêm vào yêu thích</p>
+                    </a>
+
+                    <a href="" class="social-info">
+                      <span class="lnr lnr-move"></span>
+                      <p class="hover-text">Xem thêm</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- single product -->
+            <div class="col-lg-3 col-md-6">
+              <div class="single-product">
+                <img
+                  class="img-fluid"
+                  src="/public/user-assets/img/product/p7.jpg"
+                  alt=""
+                />
+                <div class="product-details">
+                  <h6>M7</h6>
+                  <div class="price">
+                    <h6>189.000đ</h6>
+                    <h6 class="l-through">210.000đ</h6>
+                  </div>
+                  <div class="prd-bottom">
+                    <a
+                      href=""
+                      class="social-info add-to-cart"
+                      data-name="M7"
+                      data-price="189"
+                    >
+                      <span class="ti-bag"></span>
+                      <p class="hover-text">Thêm vào giỏ</p>
+                    </a>
+                    <a href="" class="social-info">
+                      <span class="lnr lnr-heart"></span>
+                      <p class="hover-text">Thêm vào yêu thích</p>
+                    </a>
+
+                    <a href="" class="social-info">
+                      <span class="lnr lnr-move"></span>
+                      <p class="hover-text">Xem thêm</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- single product -->
+            <div class="col-lg-3 col-md-6">
+              <div class="single-product">
+                <img
+                  class="img-fluid"
+                  src="/public/user-assets/img/product/p8.jpg"
+                  alt=""
+                />
+                <div class="product-details">
+                  <h6>M8</h6>
+                  <div class="price">
+                    <h6>189.000đ</h6>
+                    <h6 class="l-through">210.000đ</h6>
+                  </div>
+                  <div class="prd-bottom">
+                    <a
+                      href=""
+                      class="social-info add-to-cart"
+                      data-name="M8"
+                      data-price="189"
+                    >
+                      <span class="ti-bag"></span>
+                      <p class="hover-text">Thêm vào giỏ</p>
+                    </a>
+                    <a href="" class="social-info">
+                      <span class="lnr lnr-heart"></span>
+                      <p class="hover-text">Thêm vào yêu thích</p>
+                    </a>
+
+                    <a href="" class="social-info">
+                      <span class="lnr lnr-move"></span>
+                      <p class="hover-text">Xem thêm</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- single product slide -->
+      <div class="single-product-slider">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-6 text-center">
+              <div class="section-title">
+                <h1>Đang kinh doanh</h1>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <!-- single product -->
+            <div class="col-lg-3 col-md-6">
+              <div class="single-product">
+                <img
+                  class="img-fluid"
+                  src="/public/user-assets/img/product/p6.jpg"
+                  alt=""
+                />
+                <div class="product-details">
+                  <h6>M9</h6>
+                  <div class="price">
+                    <h6>189.000đ</h6>
+                    <h6 class="l-through">210.000đ</h6>
+                  </div>
+                  <div class="prd-bottom">
+                    <a
+                      href=""
+                      class="social-info add-to-cart"
+                      data-name="M9"
+                      data-price="189"
+                    >
+                      <span class="ti-bag"></span>
+                      <p class="hover-text">Thêm vào giỏ</p>
+                    </a>
+                    <a href="" class="social-info">
+                      <span class="lnr lnr-heart"></span>
+                      <p class="hover-text">Thêm vào yêu thích</p>
+                    </a>
+                    <a href="" class="social-info">
+                      <span class="lnr lnr-move"></span>
+                      <p class="hover-text">Xem thêm</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- single product -->
+            <div class="col-lg-3 col-md-6">
+              <div class="single-product">
+                <img
+                  class="img-fluid"
+                  src="/public/user-assets/img/product/p8.jpg"
+                  alt=""
+                />
+                <div class="product-details">
+                  <h6>M10</h6>
+                  <div class="price">
+                    <h6>189.000đ</h6>
+                    <h6 class="l-through">210.000đ</h6>
+                  </div>
+                  <div class="prd-bottom">
+                    <a
+                      href=""
+                      class="social-info add-to-cart"
+                      data-name="M10"
+                      data-price="189"
+                    >
+                      <span class="ti-bag"></span>
+                      <p class="hover-text">Thêm vào giỏ</p>
+                    </a>
+                    <a href="" class="social-info">
+                      <span class="lnr lnr-heart"></span>
+                      <p class="hover-text">Thêm vào yêu thích</p>
+                    </a>
+                    <a href="" class="social-info">
+                      <span class="lnr lnr-move"></span>
+                      <p class="hover-text">Xem thêm</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- single product -->
+            <div class="col-lg-3 col-md-6">
+              <div class="single-product">
+                <img
+                  class="img-fluid"
+                  src="/public/user-assets/img/product/p3.jpg"
+                  alt=""
+                />
+                <div class="product-details">
+                  <h6>M11</h6>
+                  <div class="price">
+                    <h6>189.000đ</h6>
+                    <h6 class="l-through">210.000đ</h6>
+                  </div>
+                  <div class="prd-bottom">
+                    <a
+                      href=""
+                      class="social-info add-to-cart"
+                      data-name="M11"
+                      data-price="189"
+                    >
+                      <span class="ti-bag"></span>
+                      <p class="hover-text">Thêm vào giỏ</p>
+                    </a>
+                    <a href="" class="social-info">
+                      <span class="lnr lnr-heart"></span>
+                      <p class="hover-text">Thêm vào yêu thích</p>
+                    </a>
+                    <a href="" class="social-info">
+                      <span class="lnr lnr-move"></span>
+                      <p class="hover-text">Xem thêm</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- single product -->
+            <div class="col-lg-3 col-md-6">
+              <div class="single-product">
+                <img
+                  class="img-fluid"
+                  src="/public/user-assets/img/product/p5.jpg"
+                  alt=""
+                />
+                <div class="product-details">
+                  <h6>M12</h6>
+                  <div class="price">
+                    <h6>189.000đ</h6>
+                    <h6 class="l-through">210.000đ</h6>
+                  </div>
+                  <div class="prd-bottom">
+                    <a
+                      href=""
+                      class="social-info add-to-cart"
+                      data-name="M12"
+                      data-price="189"
+                    >
+                      <span class="ti-bag"></span>
+                      <p class="hover-text">Thêm vào giỏ</p>
+                    </a>
+                    <a href="" class="social-info">
+                      <span class="lnr lnr-heart"></span>
+                      <p class="hover-text">Thêm vào yêu thích</p>
+                    </a>
+                    <a href="" class="social-info">
+                      <span class="lnr lnr-move"></span>
+                      <p class="hover-text">Xem thêm</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- single product -->
+            <div class="col-lg-3 col-md-6">
+              <div class="single-product">
+                <img
+                  class="img-fluid"
+                  src="/public/user-assets/img/product/p1.jpg"
+                  alt=""
+                />
+                <div class="product-details">
+                  <h6>M13</h6>
+                  <div class="price">
+                    <h6>189.000đ</h6>
+                    <h6 class="l-through">210.000đ</h6>
+                  </div>
+                  <div class="prd-bottom">
+                    <a
+                      href=""
+                      class="social-info add-to-cart"
+                      data-name="M13"
+                      data-price="189"
+                    >
+                      <span class="ti-bag"></span>
+                      <p class="hover-text">Thêm vào giỏ</p>
+                    </a>
+                    <a href="" class="social-info">
+                      <span class="lnr lnr-heart"></span>
+                      <p class="hover-text">Thêm vào yêu thích</p>
+                    </a>
+                    <a href="" class="social-info">
+                      <span class="lnr lnr-move"></span>
+                      <p class="hover-text">Xem thêm</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- single product -->
+            <div class="col-lg-3 col-md-6">
+              <div class="single-product">
+                <img
+                  class="img-fluid"
+                  src="/public/user-assets/img/product/p4.jpg"
+                  alt=""
+                />
+                <div class="product-details">
+                  <h6>M14</h6>
+                  <div class="price">
+                    <h6>189.000đ</h6>
+                    <h6 class="l-through">210.000đ</h6>
+                  </div>
+                  <div class="prd-bottom">
+                    <a
+                      href=""
+                      class="social-info add-to-cart"
+                      data-name="M14"
+                      data-price="189"
+                    >
+                      <span class="ti-bag"></span>
+                      <p class="hover-text">Thêm vào giỏ</p>
+                    </a>
+                    <a href="" class="social-info">
+                      <span class="lnr lnr-heart"></span>
+                      <p class="hover-text">Thêm vào yêu thích</p>
+                    </a>
+                    <a href="" class="social-info">
+                      <span class="lnr lnr-move"></span>
+                      <p class="hover-text">Xem thêm</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- single product -->
+            <div class="col-lg-3 col-md-6">
+              <div class="single-product">
+                <img
+                  class="img-fluid"
+                  src="/public/user-assets/img/product/p1.jpg"
+                  alt=""
+                />
+                <div class="product-details">
+                  <h6>M15</h6>
+                  <div class="price">
+                    <h6>189.000đ</h6>
+                    <h6 class="l-through">210.000đ</h6>
+                  </div>
+                  <div class="prd-bottom">
+                    <a
+                      href=""
+                      class="social-info add-to-cart"
+                      data-name="M15"
+                      data-price="189"
+                    >
+                      <span class="ti-bag"></span>
+                      <p class="hover-text">Thêm vào giỏ</p>
+                    </a>
+                    <a href="" class="social-info">
+                      <span class="lnr lnr-heart"></span>
+                      <p class="hover-text">Thêm vào yêu thích</p>
+                    </a>
+                    <a href="" class="social-info">
+                      <span class="lnr lnr-move"></span>
+                      <p class="hover-text">Xem thêm</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- single product -->
+            <div class="col-lg-3 col-md-6">
+              <div class="single-product">
+                <img
+                  class="img-fluid"
+                  src="/public/user-assets/img/product/p8.jpg"
+                  alt=""
+                />
+                <div class="product-details">
+                  <h6>M16</h6>
+                  <div class="price">
+                    <h6>189.000đ</h6>
+                    <h6 class="l-through">210.000đ</h6>
+                  </div>
+                  <div class="prd-bottom">
+                    <a
+                      href=""
+                      class="social-info add-to-cart"
+                      data-name="M16"
+                      data-price="189"
+                    >
+                      <span class="ti-bag"></span>
+                      <p class="hover-text">Thêm vào giỏ</p>
+                    </a>
+                    <a href="" class="social-info">
+                      <span class="lnr lnr-heart"></span>
+                      <p class="hover-text">Thêm vào yêu thích</p>
+                    </a>
+                    <a href="" class="social-info">
+                      <span class="lnr lnr-move"></span>
+                      <p class="hover-text">Xem thêm</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end product Area -->
+
+    
+
+    <!-- Start brand Area -->
+    <section class="brand-area section_gap">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 text-center">
+          <div class="section-title">
+            <h1 class="mb-5"><b>Thương hiệu</b></h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <a class="col single-img" href="#">
+            <img
+              class="img-fluid d-block mx-auto"
+              src="/public/user-assets/img/brand/Logo-Yonex.svg.png"
+              alt=""
+            />
+          </a>
+          <a class="col single-img" href="#">
+            <img
+              class="img-fluid d-block mx-auto"
+              src="/public/user-assets/img/brand/Logo_cong_ty_Li_Ning.png"
+              alt=""
+            />
+          </a>
+          <a class="col single-img" href="#">
+            <img
+              class="img-fluid d-block mx-auto"
+              src="/public/user-assets/img/brand/Victor-Logo-Vector.svg-.png"
+              alt=""
+            />
+          </a>
+          <a class="col single-img" href="#">
+            <img
+              class="img-fluid d-block mx-auto"
+              src="/public/user-assets/img/brand/vs-1-300x105.png"
+              alt=""
+            />
+          </a>
+          <a class="col single-img" href="#">
+            <img
+              class="img-fluid d-block mx-auto"
+              src="/public/user-assets/img/brand/apacssports.com_.my_.jpg"
+              alt=""
+            />
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- End brand Area -->
+
+    <!-- Start related-product Area -->
+    <!-- End related-product Area -->
+
+    <!-- start footer Area -->
+<footer class="footer-area section_gap">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="single-footer-widget">
+          <h6>Theo dõi chúng tôi trên các nền tảng</h6>
+          <p></p>
+          <div class="footer-social d-flex align-items-center">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-dribbble"></i></a>
+            <a href="#"><i class="fa fa-behance"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6"></div>
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="single-footer-widget mail-chimp">
+          <div class="single-footer-widget">
+            <a href="contact.html"><h6>Về chúng tôi</h6></a>
+            <p>Số điện thoại: 0789123456</p>
+            <p>Email: support@shoeshop.com</p>
+            <p>
+              Địa chỉ: khu phố 6, phường Linh Trung, quận Thủ Đức, thành phố
+              Hồ Chí Minh
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-6 col-sm-6">
+        <div class="single-footer-widget"></div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- End footer Area -->
+
+    <!--Modal-->
+    <div
+      class="modal fade"
+      id="cart1"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Giỏ hàng</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <table class="show-cart table"></table>
+            <div>Tổng tiền: <span class="total-cart"></span>.000đ</div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <a
+              href="cart.html"
+              type="button"
+              class="btn btn-primary"
+              style="background-color: #ffba00"
+            >
+              Thanh toán</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Java Script-->
+  
+    <script src="/public/user-assets/js/vendor/jquery-2.2.4.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+      integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/public/user-assets/js/vendor/bootstrap.min.js"></script>
+    <script src="/public/user-assets/js/jquery.ajaxchimp.min.js"></script>
+    <script src="/public/user-assets/js/jquery.nice-select.min.js"></script>
+    <script src="/public/user-assets/js/jquery.sticky.js"></script>
+    <script src="/public/user-assets/js/nouislider.min.js"></script>
+    <script src="/public/user-assets/js/countdown.js"></script>
+    <script src="/public/user-assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="/public/user-assets/js/owl.carousel.min.js"></script>
+
+    <!--gmaps Js-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+    <script src="/public/user-assets/js/gmaps.min.js"></script>
+    <script src="/public/user-assets/js/main.js"></script>
+    <script>
+      // Kiểm tra xem người dùng đã đăng nhập chưa
+      const loginBtn = document.getElementById('loginBtn');
+      const logoutBtn = document.getElementById('logoutBtn');
+      const profileBtn = document.getElementById('profileBtn');
+      const cartBtn = document.getElementById('cartBtn');
+      const token = localStorage.getItem('token');
+        if (!token) {
+            // window.location.href = '/';
+        } else {
+            loginBtn.classList.add('hidden')
+            logoutBtn.classList.remove('hidden')
+            profileBtn.classList.remove('hidden')
+            cartBtn.classList.remove('hidden')
+            const user = JSON.parse(localStorage.getItem('user'));
+            document.getElementById('username').textContent = 'Xin chào, ' + user.fullName;
+        }
+        logoutBtn.addEventListener('click', logout);
+        function logout() {
+            localStorage.removeItem('token');
+            localStorage.removeItem('user');
+        }
+        function buyNow(event){
+          event.preventDefault();
+          const token = localStorage.getItem('token');
+          if(!token){
+            window.location.href = './login.html'
+          }
+          else{
+            window.location.href = './products.html'
+          }
+        }
+    </script>
+  </body>
+</html>

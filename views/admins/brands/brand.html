@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+
+    <title>Shop bán giày dép</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/public/assets/css/bootstrap.css" rel="stylesheet">
+    <!--external css-->
+    <link href="/public/assets/font-awesome/css/font-awesome.css" rel="stylesheet"/>
+
+    <!-- Custom styles for this template -->
+    <link href="/public/assets/css/style.css" rel="stylesheet">
+    <link href="/public/assets/css/style-responsive.css" rel="stylesheet">
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<section id="container">
+    <!-- **********************************************************************************************************************************************************
+    TOP BAR CONTENT & NOTIFICATIONS
+    *********************************************************************************************************************************************************** -->
+    <!--header start-->
+    <header class="header black-bg">
+        <div class="sidebar-toggle-box">
+            <div class="fa fa-bars tooltips" data-placement="right"></div>
+        </div>
+        <!--logo start-->
+        <a href="index.html" class="logo"><b>Badminton Store</b></a>
+        <!--logo end-->
+
+        <div class="top-menu">
+            <ul class="nav pull-right top-menu">
+                <li><a class="logout" href="login.html">Đăng xuất</a></li>
+            </ul>
+        </div>
+    </header>
+    <!--header end-->
+    <!-- **********************************************************************************************************************************************************
+    MAIN SIDEBAR MENU
+    *********************************************************************************************************************************************************** -->
+    <!--sidebar start-->
+    <aside>
+        <div id="sidebar" class="nav-collapse ">
+            <!-- sidebar menu start-->
+            <ul class="sidebar-menu" id="nav-accordion">
+
+                <p class="centered"><a href="profile.html"><img src="/img/ui-sam.jpg" class="img-circle"
+                                                                width="60"></a></p>
+                <h5 class="centered">Ngân Nguyễn</h5>
+
+                <li class="mt">
+                    <a href="index.html">
+                        <i class="fa fa-dashboard"></i>
+                        <span>Trang chủ</span>
+                    </a>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="fa fa-cogs"></i>
+                        <span>Các thành phần</span>
+                    </a>
+                    <ul class="sub">
+                        <li><a href="calendar.html">Lịch</a></li>
+
+                        <li><a href="todo_list.html">Todo List</a></li>
+                    </ul>
+
+
+                <li class="sub-menu">
+                    <a href="chartjs.html">
+                        <i class=" fa fa-bar-chart-o"></i>
+                        <span>Biểu đồ</span>
+                    </a>
+
+                </li>
+                <li class="active" class="sub-menu">
+                    <a  href="distributor.html">
+                        <i class=" fa fa-bar-chart-o"></i>
+                        <span>Nhà cung cấp</span>
+                    </a>
+                </li>
+                <li class="sub-menu">
+                    <a href="account.html">
+                        <i class=" fa fa-bar-chart-o"></i>
+                        <span>Tài khoản</span>
+                    </a>
+                </li>
+                <li class="sub-menu">
+                    <a href="product.html">
+                        <i class=" fa fa-bar-chart-o"></i>
+                        <span>Sản phẩm</span>
+                    </a>
+                </li>
+
+            </ul>
+            <!-- sidebar menu end-->
+        </div>
+    </aside>
+    <!--sidebar end-->
+
+    <!-- **********************************************************************************************************************************************************
+    MAIN CONTENT
+    *********************************************************************************************************************************************************** -->
+    <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper">
+            <div class="add-category-form mt">
+                <form class="form-inline" method="POST">
+                    <div class="form-group">
+                        <input class="form-control" type="text" step="height:auto" placeholder="Thêm thương hiệu">
+                    </div>
+                        <button class="btn btn-success"><i class="fa fa-plus"></i></button>
+                </form>
+            </div>
+                
+            <div class="row">
+                <div class="col-md-12 mt">
+                    <div class="content-panel">
+                        <table class="table table-hover">
+                            <h4>Danh sách thương hiệu</h4>
+                            <hr>
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Tên thương hiệu</th>
+                                <th>Mô tả</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody id="brand-list-tbody">
+                             <tr>
+
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div><!--/content-panel -->
+                </div><!-- /col-md-12 -->
+
+            </div>
+        </section>
+        <!--/wrapper -->
+    </section><!-- /MAIN CONTENT -->
+
+    <!--main content end-->
+    <!--footer start-->
+    <footer class="site-footer">
+        <div class="text-center">
+            <a href="category.html" class="go-top">
+                <i class="fa fa-angle-up"></i>
+            </a>
+        </div>
+    </footer>
+    <!--footer end-->
+</section>
+
+<!-- js placed at the end of the document so the pages load faster -->
+<script src="/public/assets/js/jquery.js"></script>
+<script src="/public/assets/js/bootstrap.min.js"></script>
+<script class="include" type="text/javascript" src="/public/assets/js/jquery.dcjqaccordion.2.7.js"></script>
+<script src="/public/assets/js/jquery.scrollTo.min.js"></script>
+<script src="/public/assets/js/jquery.nicescroll.js" type="text/javascript"></script>
+
+
+<!--common script for all pages-->
+<script src="/public/assets/js/common-scripts.js"></script>
+<!--script for this page-->
+<script src="/public/assets/js/brand.js"></script>
+<script>
+    //custom select box
+
+    $(function () {
+        $('select.styled').customSelect();
+    });
+
+</script>
+<script>
+    const token = localStorage.getItem('token');
+    if (!token) {
+        window.location.href = '/views/users/login.html';
+    } else {
+        const user = JSON.parse(localStorage.getItem('user'));
+        if(user.role.name == 'Admin'){
+          document.getElementById('hello').textContent = 'xin chào, ' + user.fullName;
+        }
+        else{
+          window.location.href = '/views/users/index.html';
+        }
+    }
+    const logoutBtn = document.getElementById('logoutBtn');
+    logoutBtn.addEventListener('click', logout);
+    function logout() {
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+        window.location.href = '/views/users/login.html';
+    }
+</script>
+</body>
+</html>

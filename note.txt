@@ -1,0 +1,31 @@
+CREATE USER
+{
+   "username": "vodanghuy",
+   "password": "123",
+   "email": "iamdaghuy@gmail.com",
+   "fullName": "iamdaghuy",
+   "phoneNumber": "0866733574",
+   "dateOfBirth": "03/12/2003",
+   "gender": "Nam",
+   "role": "User"
+}
+
+* npm i slugify
+
+* dynamic menu
+
+** CSRF (Cross Site Request Forgery)
+npm i cors -> app.js [
+   let cors = require('cors') 
+   app.use(cors({
+      origin:'*'
+   }))
+   ]
+
+* npm i express-validator
+- validate
+- validation result
+
+* node mailer
+
+*mail trap
