@@ -19,8 +19,6 @@ let { validate, UserValidation } = require("../utils/validator");
 // Get all users
 router.get(
   "/",
-  check_authentication,
-  check_authorization(constants.ADMIN_PERMISSION),
   async function (req, res, next) {
     try {
       let users = await userController.getAllUsers();

@@ -10,13 +10,13 @@
     <title>Shop bán giày dép</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/public/assets/css/bootstrap.css" rel="stylesheet">
     <!--external css-->
-    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet"/>
+    <link href="/public/assets/font-awesome/css/font-awesome.css" rel="stylesheet"/>
 
     <!-- Custom styles for this template -->
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link href="assets/css/style-responsive.css" rel="stylesheet">
+    <link href="/public/assets/css/style.css" rel="stylesheet">
+    <link href="/public/assets/css/style-responsive.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -55,10 +55,7 @@
         <div id="sidebar" class="nav-collapse ">
             <!-- sidebar menu start-->
             <ul class="sidebar-menu" id="nav-accordion">
-
-                <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle"
-                                                                width="60"></a></p>
-                <h5 class="centered">Ngân Nguyễn</h5>
+                <h5 id="hello" class="centered"></h5>
 
                 <li class="mt">
                     <a href="index.html">
@@ -67,21 +64,16 @@
                     </a>
                 </li>
                 <li class="sub-menu">
-                    <a href="javascript:;">
-                        <i class="fa fa-cogs"></i>
-                        <span>Các thành phần</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a href="calendar.html">Lịch</a></li>
-
-                        <li><a href="todo_list.html">Todo List</a></li>
-                    </ul>
-
-
-                <li class="sub-menu">
-                    <a href="chartjs.html">
+                    <a href="../brand.html">
                         <i class=" fa fa-bar-chart-o"></i>
-                        <span>Biểu đồ</span>
+                        <span>Thương hiệu</span>
+                    </a>
+
+                </li>
+                <li class="sub-menu">
+                    <a href="../category.html">
+                        <i class=" fa fa-bar-chart-o"></i>
+                        <span>Danh mục</span>
                     </a>
 
                 </li>
@@ -127,77 +119,26 @@
                             <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Họ</th>
-                                <th>Tên</th>
+                                <th>Họ và tên</th>
                                 <th>Username</th>
+                                <th>Email</th>
+                                <th>Số điện thoại</th>
                                 <th></th>
                             </tr>
                             </thead>
-                            <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Nguyễn</td>
-                                <td>Bảo Ngân</td>
-                                <td>@mdo</td>
-                                <td>
-                                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                                    <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                    <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Nguyễn</td>
-                                <td>Phương Nhi</td>
-                                <td>@pn</td>
-                                <td>
-                                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                                    <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                    <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Nguyễn</td>
-                                <td>Hồng Linh</td>
-                                <td>@hiln</td>
-                            <td>
-                                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                                    <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                    <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>Trần</td>
-                                <td>Trọng</td>
-                                <td>@ttt</td>
-                                <td>
-                                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                                    <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                    <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>Tiêu</td>
-                                <td>Hữu Chí</td>
-                                <td>@thc</td>
-                                <td>
-                                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                                    <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                    <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                                </td>
+                            <tbody id = "account-list-tbody">
+                           <tr>
+        
                             </tr>
                             </tbody>
                         </table>
                     </div>
-                    <! --/content-panel -->
+                    <!--/content-panel -->
                 </div><!-- /col-md-12 -->
 
             </div>
         </section>
-        <! --/wrapper -->
+        <!--/wrapper -->
     </section><!-- /MAIN CONTENT -->
 
     <!--main content end-->
@@ -214,18 +155,18 @@
 </section>
 
 <!-- js placed at the end of the document so the pages load faster -->
-<script src="assets/js/jquery.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
-<script src="assets/js/jquery.scrollTo.min.js"></script>
-<script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
+<script src="/public/assets/js/jquery.js"></script>
+<script src="/public/assets/js/bootstrap.min.js"></script>
+<script class="include" type="text/javascript" src="/public/assets/js/jquery.dcjqaccordion.2.7.js"></script>
+<script src="/public/assets/js/jquery.scrollTo.min.js"></script>
+<script src="/public/assets/js/jquery.nicescroll.js" type="text/javascript"></script>
 
 
 <!--common script for all pages-->
-<script src="assets/js/common-scripts.js"></script>
+<script src="/public/assets/js/common-scripts.js"></script>
 
 <!--script for this page-->
-
+<script src="/public/assets/js/account.js"></script>
 <script>
     //custom select box
 
@@ -233,6 +174,27 @@
         $('select.styled').customSelect();
     });
 
+</script>
+<script>
+    const token = localStorage.getItem('token');
+    if (!token) {
+        window.location.href = '/views/users/login.html';
+    } else {
+        const user = JSON.parse(localStorage.getItem('user'));
+        if(user.role.name == 'Admin'){
+          document.getElementById('hello').textContent = 'xin chào, ' + user.fullName;
+        }
+        else{
+          window.location.href = '/views/users/index.html';
+        }
+    }
+    const logoutBtn = document.getElementById('logoutBtn');
+    logoutBtn.addEventListener('click', logout);
+    function logout() {
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+        window.location.href = '/views/users/login.html';
+    }
 </script>
 
 </body>
