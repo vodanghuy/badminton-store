@@ -26,9 +26,29 @@ function convertFromObjToHTML(product){
                                 <td>${product.quantity}</td>
                                 <td>
                                     <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                    <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
+                                    <button onclick="deleteProduct('${product._id}', event); return false;" class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
                                 </td>`
     return string;
+}
+async function deleteProduct(productId, event){
+    event.preventDefault()
+    try {
+        let response = await fetch(`http://localhost:3000/products/${productId}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        })
+        let result = await response.json()
+        if (result.success) {
+            alert(result.message)
+            loadSync()
+        } else {
+            alert(result.message)
+        }
+    } catch (error) {
+        console.log(error);
+    }
 }
 async function productDetail(productId){
     
