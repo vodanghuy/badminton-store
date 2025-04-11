@@ -24,10 +24,11 @@ document.getElementById("contactForm").addEventListener("submit", async function
             localStorage.setItem('token', result.data);
             localStorage.setItem('user', JSON.stringify(result.user));
             if(result.user.role.name === 'Admin'){
-                window.location.href = '/views/admins/index.html'; // Trang sau khi đăng nhập
+                window.location.href = '/views/admins/products/product.html'; // Trang sau khi đăng nhập
+                alert("Đăng nhập thành công")
             }
             if(result.user.role.name === 'User'){
-                // window.location.href = '/views/users/index.html'; // Trang sau khi đăng nhập
+                window.location.href = '/views/users/index.html'; // Trang sau khi đăng nhập
                 alert("Đăng nhập thành công")
             }
         }

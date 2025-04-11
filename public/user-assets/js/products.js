@@ -18,7 +18,7 @@ async function loadSync(){
 function convertFromObjToHTML(product){
     let string = `<div class="col-lg-4 col-md-6">
 							<div class="single-product">`
-    string += `<img class="img-fluid resize" src="/public/user-assets/img/product/${product.imageURL}" alt="">`
+    string += `<img class="img-fluid resize" src="${product.imageURL}" alt="">`
     string += `<div class="product-details">`
     string += `<a href=""><h6>${product.name}</h6></a>`
     string += `<div class="price"><h6>${product.price.toLocaleString('vi-VN')}₫</h6>`

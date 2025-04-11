@@ -7,10 +7,12 @@ async function loadCart(){
         let fullName = document.getElementById("fullName")
         let token = localStorage.getItem('token')
         let user = JSON.parse(localStorage.getItem('user'))
+
         fullName.setAttribute("value", user.fullName)
         document.getElementById("address").setAttribute("value", user.address)
         document.getElementById("phoneNumber").setAttribute("value", user.phoneNumber)
         document.getElementById("email").setAttribute("value", user.email)
+        
         let response = await fetch(`http://localhost:3000/cart/getCart/${user._id}`, {
             method: 'GET',
             headers: {
@@ -30,7 +32,7 @@ async function loadCart(){
                     }
                 })
                 let result1 = await response1.json()
-                let productDetail = result1
+                let productDetail = result1.data
                 totalAmount += productDetail.price * p.quantity;
                 body.innerHTML += convertFromObjToHTML(productDetail, p.quantity);
                 
@@ -69,7 +71,7 @@ async function checkout(event){
         let result = await response.json()
         if (result.success) {
             alert("Đặt hàng thành công")
-            // window.location.href = '/views/users/index.html'; // Trang sau khi đăng nhập
+            window.location.href = '/views/users/index.html'; // Trang sau khi đăng nhập
         } else {
             alert(result.message)
         }
