@@ -20,10 +20,10 @@ async function loadSync(){
 }
 function convertFromObjToHTML(product){
     let string = `<td>${i}</td>
-                                <td>Yonex Arcsaber 2 Feel</td>
-                                <td>Vợt cầu lông</td>
-                                <td>4.550.000 đ</td>
-                                <td>8</td>
+                                <td>${product.name}</td>
+                                <td>${product.category.name}</td>
+                                <td>${product.price.toLocaleString('vi-VN')} đ</td>
+                                <td>${product.quantity}</td>
                                 <td>
                                     <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
                                     <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
